@@ -14,11 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-<<<<<<< HEAD
   "/precache-manifest.9fa006a88f7eb1fb009c488c8cec6d13.js"
-=======
-  "/precache-manifest.e5ab62bb8a422168d74cf3884f64ee9e.js"
->>>>>>> parent of 131dd60 (didn't work)
 );
 
 workbox.clientsClaim();
