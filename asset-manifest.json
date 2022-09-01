@@ -1,7 +1,7 @@
 {
   "main.css": "/static/css/main.b2297c07.chunk.css",
-  "main.js": "/static/js/main.65b25724.chunk.js",
-  "main.js.map": "/static/js/main.65b25724.chunk.js.map",
+  "main.js": "/static/js/main.e8356ec3.chunk.js",
+  "main.js.map": "/static/js/main.e8356ec3.chunk.js.map",
   "static/js/1.eab05f31.chunk.js": "/static/js/1.eab05f31.chunk.js",
   "static/js/1.eab05f31.chunk.js.map": "/static/js/1.eab05f31.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
@@ -68,6 +68,6 @@
   "static/media/FooterOshyarenaLogo.7583f8c8.svg": "/static/media/FooterOshyarenaLogo.7583f8c8.svg",
   "static/css/main.b2297c07.chunk.css.map": "/static/css/main.b2297c07.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.ab306b1b22d3e516c299ba6aba8deeba.js": "/precache-manifest.ab306b1b22d3e516c299ba6aba8deeba.js",
+  "precache-manifest.87952249093c29be9e32dbe8bb8e21d2.js": "/precache-manifest.87952249093c29be9e32dbe8bb8e21d2.js",
   "service-worker.js": "/service-worker.js"
 }
