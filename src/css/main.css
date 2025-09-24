@@ -217,9 +217,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   padding: 20px 10px;
   gap: 10px;
+  max-height: 720px;
+  overflow: auto;
 }
 .NS-container-title {
   font-weight: 400;
