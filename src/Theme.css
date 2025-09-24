@@ -1,0 +1,859 @@
+@font-face {
+  font-family: "F-Navbar";
+  src: url(./Assets/Fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "F-NavbarTitle";
+  src: url(./Assets/Fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "F-BigTitle";
+  src: url(./Assets/Fonts/Baskervville-Regular.ttf);
+}
+
+@font-face {
+  font-family: "F-Content";
+  src: url(./Assets/Fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "F-Link";
+  src: url(./Assets/Fonts/InterTight-ExtraLightItalic.ttf);
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url(./Assets/Fonts/OpenDyslexic-Regular.otf);
+}
+@font-face {
+  font-family: "F-AboutVesnea";
+  src: url(./Assets/Fonts/JosefinSans-Italic-VariableFont_wght.ttf);
+}
+html {
+  scroll-behavior: smooth;
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  font-size: var(--Fs-Content);
+  line-height: 20pt;
+  text-decoration: initial;
+  font-weight: 300;
+  background-image: url("./Assets/Common/VesBG_1b.webp");
+  background-size: 12%;
+}
+html[data-theme="dark"] {
+  background-image: url("./Assets/Common/VesBG_1.webp");
+}
+html[data-theme="star"] {
+  background-image: url("./Assets/Common/VesBG_2.webp");
+}
+.bigtitle {
+  font-family: "Baskervville", "Noto Serif JP", serif;
+  font-size: var(--Fs-BigTitle);
+  line-height: normal;
+  font-style: normal;
+  text-decoration: initial;
+}
+.title {
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  font-size: var(--Fs-Title);
+  line-height: normal;
+  font-style: italic;
+  text-decoration: initial;
+}
+.fnbar {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-size: var(--Fs-Content-small);
+  line-height: normal;
+  text-decoration: initial;
+}
+.textpanel {
+  border-bottom: 1px dashed var(--textpanel-border);
+}
+.textpanel input {
+  background-color: var(--textpanel-background);
+  font-family: var(--F-TextPanel);
+  font-size: var(--Fs-Content);
+  color: var(--textpanel-text);
+  border: 1px solid var(--textpanel-border2);
+  border-radius: 4px;
+  outline: none;
+}
+.textpanel input:hover,
+input:focus {
+  background-color: var(--textpanel-background-active);
+  color: var(--textpanel-text-active);
+  border: 1px solid var(--textpanel-border-active);
+  box-shadow: 0 8px 12px
+    color-mix(in srgb, var(--textpanel-border-active) 50%, transparent);
+}
+button {
+  background-color: var(--button-background);
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-size: var(--Fs-Content-small);
+  color: var(--button-text);
+  cursor: pointer;
+  border: 1px solid var(--button-border2);
+  border-radius: 5px;
+}
+button:hover,
+button:active {
+  background-color: var(--button-background-active);
+  color: var(--button-text-active);
+  font-style: oblique;
+  border: 1px solid var(--button-border2-active);
+  box-shadow: 0 8px 12px
+    color-mix(in srgb, var(--button-border2-active) 50%, transparent);
+}
+input[type="color"] {
+  border-radius: 5px;
+  border: 2px solid var(--bg-color-1);
+}
+
+.josefin-sans-AboutVesnea {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+.noto-sans-jp {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+}
+.noto-serif-jp {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+}
+.biz-udpmincho-regular {
+  font-family: "BIZ UDPMincho", serif;
+  font-weight: 400;
+}
+
+/* Variable setting*/
+* {
+  --F-Montserrat: "Montserrat", "Noto Sans JP", sans-serif;
+  --F-Footbar: "Josefin Sans", "Noto Sans JP", sans-serif;
+  --F-Default: "Josefin Sans", "Noto Sans JP", sans-serif;
+  --F-CharCard: "Crimson Pro", "BIZ UDPMincho", serif;
+  --F-TextPanel: "Josefin Sans", "Noto Sans JP", sans-serif;
+  --F-AboutVesnea: "Josefin Sans", "Noto Sans JP", sans-serif;
+  /* Story page */
+  --content-padding: 22vw;
+  --line-height: 1.6;
+  --paragraph-gap: 10px;
+  --letter-spacing: 1px;
+  --word-spacing: 0px;
+  /* Poem page */
+  --content-padding2: 32vw;
+  --line-height2: 1.6;
+  --paragraph-gap2: 10px;
+  --letter-spacing2: 1px;
+  --word-spacing2: 0px;
+}
+@media only screen and (max-width: 1715px) {
+  * {
+    --content-padding: 10vw;
+    --content-padding2: 10vw;
+  }
+}
+
+/* These are the standard font sizes*/
+* {
+  --Fs-Navbar: 13pt;
+  --Fs-Footbar: 12pt;
+  --Fs-NavbarTitle: 18pt;
+  --Fs-BigTitle: 48pt;
+  --Fs-Title: 24pt;
+  --Fs-ContentTitle: 18pt;
+  --Fs-Content: 18pt;
+  --Fs-Content-small: 12pt;
+  --Fs-Content-smaller: 10pt;
+  --Fs-AboutVesneaTitle: 24pt;
+  --Fs-NotFoundTitle: 6rem;
+  --Fs-NotFoundDesc: 1.5rem;
+  --Fs-NotFoundBtn: 1.2rem;
+}
+@media only screen and (max-width: 800px) {
+  * {
+    --Fs-Navbar: 12pt;
+    --Fs-Footbar: 12pt;
+    --Fs-NavbarTitle: 18pt;
+    --Fs-BigTitle: 24pt;
+    --Fs-Title: 20pt;
+    --Fs-ContentTitle: 18pt;
+    --Fs-Content: 12pt;
+    --Fs-Content-small: 10pt;
+    --Fs-Content-smaller: 8pt;
+    --Fs-AboutVesneaTitle: 16pt;
+  }
+}
+
+/*These are font sizer*/
+* {
+  --Fs-FontsizeS: 4pt;
+  --Fs-FontsizeM: 8pt;
+}
+
+/*These are the color palette*/
+* {
+  --C-SeaWeb_Dark_Purple: #181621; /*Main Color*/
+  --C-SeaWeb_Dark_Purple2: rgba(24, 22, 33, 0.75);
+  --C-SeaWeb_Purple: #2c233d;
+  --C-SeaWeb_Purple2: rgba(44, 35, 61, 0.5);
+  --C-SeaWeb_Purple3: rgba(44, 35, 61, 0.75);
+
+  --C-Seavalanche_Light_Blue: #bbe2f0;
+
+  --C-Vesnea_Purple: #4c2c57;
+  --C-Vesnea_Pink: #f29cc2;
+  --C-Vesnea_Light_Pink: #fdc4d3;
+  --C-Vesnea_white: #fefcfc;
+  --C-Vesnea_whiteb: rgba(240, 248, 252, 0.98);
+  --C-Vesnea_whitec: rgba(240, 248, 252, 0.7);
+
+  --C-Seava_Dark_Blue: #3e4f7b;
+  --C-Seava_Lighter_Dark_Blue: #536e9d;
+  --C-Seava_Blue: #4c77ae;
+  --C-Seava_Light_Blue: #9bd0e2;
+  --C-Seava_Yellow: rgb(252, 243, 217);
+  --C-Seava_Yellowb: rgba(252, 243, 217, 0.3);
+
+  --C-Korazu_Orange: #fcba9f;
+  --C-Korazu_Yellow: #ebd6a5;
+  --C-Korazu_Light_Yellow: #f5eeda;
+  --C-Korazu_White: #fbf8ee;
+
+  --C-Uzakon_Purple: #958abf;
+  --C-Uzakon_Light_Purple: #c6b0cf;
+  --C-Uzakon_Lighter_Light_Purple: #d8d3e5;
+  --C-Uzakon_White: #eeecf4;
+
+  --C-Zumiko_Red: #e28094;
+  --C-Zumiko_Light_Red: #f2cbd4;
+  --C-Zumiko_Pink: #f8bed5;
+  --C-Zumiko_White: #f9e8ec;
+
+  --C-MythSeavalanche_Light_Yellow: #fbefa1;
+  --C-MythSeavalanche_Yellow: #f4df7e;
+  --C-MythSeavalanche_Dark_Yellow: #d8b86d;
+  --C-MythSeavalanche_Light_Green: #e0e98b;
+  --C-MythSeavalanche_Green: #c1cc83;
+  --C-MythSeavalanche_Dark_Green: #9ebb98;
+  --C-MythSeavalanche_Blue: #e6f3f8;
+  --C-MythSeavalanche_Peach: #f4cebd;
+
+  --cutepink: #ff69b4;
+  --cutepink2: #d63384;
+
+  --TC-BG_Light: var(--C-Vesnea_white);
+  --TC-BG_Light2: var(--C-Uzakon_Light_Purple);
+  --TC-BG_Light3: var(--C-Uzakon_Lighter_Light_Purple);
+  --TC-BG_Dark: var(--C-SeaWeb_Purple);
+  --TC-BG_Dark2: var(--C-SeaWeb_Dark_Purple);
+  --TC-Text_Light: var(--C-SeaWeb_Purple);
+  --TC-Text_Light2: var(--C-Vesnea_Purple);
+  --TC-Text_Dark: var(--C-Korazu_Yellow);
+  --TC-Text_Dark2: var(--C-Vesnea_white);
+
+  /* Attributes */
+  --attribute-aether: #f4df7e;
+  --attribute-void: #1c1b1d;
+  --attribute-light: #ffffff;
+  --attribute-darkness: #382f3c;
+  --attribute-fire: #e1294d;
+  --attribute-water: #3e4f7b;
+  --attribute-nature: #70bb74;
+  --attribute-metal: #5a6775;
+  --attribute-electric: #ffe941;
+  --attribute-wind: #9be2c9;
+  --attribute-magical: #fdc4d3;
+  --attribute-psionic: #ce36be;
+  --attribute-spirit: #70488c;
+  --attribute-sound: #ec6f97;
+  --attribute-text-seawebdarkpurple: #181621;
+  --attribute-text-vesneawhite: #fefcfc;
+}
+/* Global theme */
+:root {
+  /* Light Theme */
+  --navbg: var(--C-Vesnea_white);
+  --navbg-ext: var(--C-Vesnea_Light_Pink);
+  --navbg-secondary: color-mix(
+    in srgb,
+    var(--C-Vesnea_Light_Pink) 50%,
+    transparent
+  );
+  --navbg-secondary-m: color-mix(
+    in srgb,
+    var(--C-Vesnea_Light_Pink) 20%,
+    var(--navbg) 70%
+  );
+  --navtext-a: var(--C-SeaWeb_Purple);
+  --navtext-b: var(--C-SeaWeb_Purple);
+  --navtext-accent: var(--C-Vesnea_Pink);
+
+  --footnavtext-a: var(--C-Vesnea_white);
+  --footnavtext-b: var(--C-Korazu_white);
+
+  --bg-color-1: var(--C-Vesnea_white);
+  --text-color-1a: var(--C-SeaWeb_Purple);
+  --text-color-1b: var(--C-SeaWeb_Purple);
+
+  --bg-color-2: var(--C-Uzakon_Light_Purple);
+  --text-color-2a: var(--C-Vesnea_Purple);
+  --text-color-2b: var(--C-Vesnea_Purple);
+
+  --bg-color-3: var(--C-Uzakon_Lighter_Light_Purple);
+  --text-color-3a: var(--C-Vesnea_Purple);
+  --text-color-3b: var(--C-Vesnea_Purple);
+
+  /* Texts */
+  --text-hover: var(--cutepink);
+
+  /* Buttons */
+  --button-background: var(--bg-color-3);
+  --button-text: var(--C-SeaWeb_Dark_Purple);
+  --button-border: var(--C-Uzakon_Light_Purple);
+  --button-border2: var(--C-Uzakon_Lighter_Light_Purple);
+  --button-background-active: color-mix(
+    in srgb,
+    var(--attribute-sound) 80%,
+    transparent
+  );
+  --button-text-active: var(--C-Vesnea_white);
+  --button-border-active: var(--C-SeaWeb_Dark_Purple);
+  --button-border2-active: var(--cutepink);
+
+  /* Textpanels */
+  --textpanel-background: var(--C-Uzakon_Lighter_Light_Purple);
+  --textpanel-text: var(--C-Vesnea_Purple);
+  --textpanel-border: var(--C-Uzakon_Light_Purple);
+  --textpanel-border2: var(--C-Uzakon_Lighter_Light_Purple);
+  --textpanel-background-active: color-mix(
+    in srgb,
+    var(--C-Vesnea_Light_Pink) 50%,
+    transparent
+  );
+  --textpanel-text-active: var(--C-Vesnea_Purple);
+  --textpanel-border-active: var(--cutepink);
+
+  /* Sliders */
+  --slider-background-active: var(--textpanel-background-active);
+
+  /* Charcard */
+  --charcard-bg: var(--C-Vesnea_white);
+  --charcard-PFPbg: var(--C-Zumiko_White);
+  --charcard-text-prop: var(--C-Uzakon_Light_Purple);
+  --charcard-text-value: var(--C-SeaWeb_Dark_Purple);
+  --charcard-text-name: var(--C-SeaWeb_Dark_Purple);
+  --charcard-text-altname: var(--C-Uzakon_Purple);
+  --charcard-border: var(--C-Vesnea_Light_Pink);
+  --charcard-PFPborder: var(--C-Vesnea_white);
+  --charcard-closebtn: var(--C-Vesnea_Pink);
+  --charcard-active-tab: var(--attribute-sound);
+  --charcard-active-tab-border: var(--attribute-sound);
+  --charcard-active-tab-text: var(--C-Vesnea_white);
+
+  --storyfnbar-text: var(--C-SeaWeb_Dark_Purple);
+  --storyfnbar-text2: var(--C-Vesnea_Purple);
+  --aboutvesnea-bg: var(--C-Zumiko_White);
+  --aboutvesnea-text: var(--C-Vesnea_Purple);
+  --aboutvesnea-link: var(--attribute-sound);
+  --aboutvesnea-cardborder: var(--C-Zumiko_Pink);
+  --generaltitle-text: var(--C-Vesnea_Purple);
+  --generalcontent-text: var(--C-Vesnea_Purple);
+  --generalcontent-texthover: var(--cutepink2);
+  --generalcontent-textshadow: var(--C-Vesnea_Pink);
+  --poembook-scroll-btn: color-mix(
+    in srgb,
+    var(--C-Uzakon_Purple) 30%,
+    transparent
+  );
+  --listseparator-text: var(--cutepink2);
+  --listseparator-bg: color-mix(
+    in srgb,
+    var(--C-Vesnea_Light_Pink) 30%,
+    transparent
+  );
+  --notfound-bg1: color-mix(
+    in srgb,
+    var(--C-Vesnea_Light_Pink) 10%,
+    var(--C-Vesnea_white) 90%
+  );
+  --notfound-bg2: color-mix(
+    in srgb,
+    var(--C-Vesnea_Pink) 35%,
+    var(--C-Vesnea_white) 65%
+  );
+  --notfound-text1: var(--cutepink2);
+  --notfound-text2: var(--cutepink2);
+  --notfound-textbtn: color-mix(
+    in srgb,
+    var(--C-Vesnea_white) 90%,
+    var(--C-Vesnea_Pink) 10%
+  );
+  --notfound-btn: color-mix(
+    in srgb,
+    var(--cutepink) 80%,
+    var(--C-Vesnea_Purple) 20%
+  );
+}
+[data-theme="dark"] {
+  /* Dark Theme */
+  --navbg: var(--C-SeaWeb_Purple);
+  --navbg-ext: var(--C-Vesnea_white);
+  --navbg-secondary: color-mix(
+    in srgb,
+    var(--C-SeaWeb_Dark_Purple) 50%,
+    transparent
+  );
+  --navbg-secondary-m: color-mix(
+    in srgb,
+    var(--C-SeaWeb_Dark_Purple) 20%,
+    var(--navbg) 70%
+  );
+  --navtext-a: var(--C-Korazu_Yellow);
+  --navtext-b: var(--C-Korazu_Yellow);
+  --navtext-accent: var(--C-Vesnea_Pink);
+
+  --footnavtext-a: var(--C-Vesnea_white);
+  --footnavtext-b: var(--C-Korazu_White);
+
+  --bg-color-1: var(--C-SeaWeb_Purple);
+  --text-color-1a: var(--C-Korazu_Yellow);
+  --text-color-1b: var(--C-Vesnea_white);
+
+  --bg-color-2: var(--C-SeaWeb_Dark_Purple);
+  --text-color-2a: var(--C-Korazu_Yellow);
+  --text-color-2b: var(--C-Vesnea_white);
+
+  --bg-color-3: var(--C-SeaWeb_Dark_Purple);
+  --text-color-3a: var(--C-Vesnea_white);
+  --text-color-3b: var(--C-Korazu_White);
+
+  /* Texts */
+  --text-hover: var(--C-Korazu_Yellow);
+
+  /* Buttons */
+  --button-background: var(--C-SeaWeb_Dark_Purple);
+  --button-text: var(--C-Uzakon_White);
+  --button-border: var(--C-Uzakon_Purple);
+  --button-border2: var(--C-SeaWeb_Purple);
+  --button-background-active: color-mix(
+    in srgb,
+    var(--C-Korazu_Yellow) 80%,
+    transparent
+  );
+  --button-text-active: var(--C-SeaWeb_Purple);
+  --button-border-active: var(--C-Uzakon_White);
+  --button-border2-active: var(--C-Korazu_Yellow);
+
+  /* Textpanels */
+  --textpanel-background: var(--C-SeaWeb_Dark_Purple);
+  --textpanel-text: var(--C-Uzakon_Light_Purple);
+  --textpanel-border: var(--C-Uzakon_Purple);
+  --textpanel-border2: var(--textpanel-border);
+  --textpanel-background-active: var(--C-SeaWeb_Purple);
+  --textpanel-background-active: color-mix(
+    in srgb,
+    var(--C-Korazu_Yellow) 30%,
+    var(--C-SeaWeb_Dark_Purple) 80%
+  );
+  --textpanel-text-active: var(--C-Korazu_Yellow);
+  --textpanel-border-active: var(--C-Korazu_Yellow);
+
+  /* Sliders */
+  --slider-background-active: var(--textpanel-background-active);
+
+  /* Charcard */
+  --charcard-bg: var(--C-SeaWeb_Purple);
+  --charcard-PFPbg: var(--C-Uzakon_Lighter_Light_Purple);
+  --charcard-text-prop: var(--C-Uzakon_Purple);
+  --charcard-text-value: var(--C-Uzakon_White);
+  --charcard-text-name: var(--C-Vesnea_white);
+  --charcard-text-altname: var(--C-Uzakon_Light_Purple);
+  --charcard-border: var(--C-Uzakon_Light_Purple);
+  --charcard-PFPborder: var(--C-Korazu_Yellow);
+  --charcard-closebtn: var(--C-Uzakon_Purple);
+  --charcard-active-tab: var(--C-Korazu_Yellow);
+  --charcard-active-tab-border: var(--C-Korazu_Yellow);
+  --charcard-active-tab-text: var(--C-SeaWeb_Purple);
+
+  --storyfnbar-text: var(--C-Uzakon_White);
+  --storyfnbar-text2: var(--C-Uzakon_Purple);
+  --aboutvesnea-bg: var(--C-SeaWeb_Purple);
+  --aboutvesnea-text: var(--C-Zumiko_Light_Red);
+  --aboutvesnea-link: var(--C-Zumiko_Red);
+  --aboutvesnea-cardborder: var(--C-Vesnea_Purple);
+  --generaltitle-text: var(--C-Zumiko_Light_Red);
+  --generalcontent-text: var(--C-Zumiko_Light_Red);
+  --generalcontent-texthover: var(--C-Korazu_Yellow);
+  --generalcontent-textshadow: var(--C-Korazu_Yellow);
+  --poembook-scroll-btn: rgba(0, 0, 0, 0.15);
+  --listseparator-text: color-mix(
+    in srgb,
+    var(--C-SeaWeb_Dark_Purple) 70%,
+    var(--C-Vesnea_Purple) 10%
+  );
+  --listseparator-text: color-mix(
+    in srgb,
+    var(--C-Korazu_Yellow) 80%,
+    transparent
+  );
+  --listseparator-bg: color-mix(
+    in srgb,
+    var(--C-Vesnea_Purple) 30%,
+    var(--C-Vesnea_white) 20%
+  );
+  --listseparator-bg: color-mix(
+    in srgb,
+    var(--C-SeaWeb_Dark_Purple) 40%,
+    transparent
+  );
+  --notfound-bg1: var(--C-SeaWeb_Purple);
+  --notfound-bg2: var(--C-SeaWeb_Dark_Purple);
+  --notfound-text1: var(--C-Korazu_Yellow);
+  --notfound-text2: var(--C-Vesnea_Light_Pink);
+  --notfound-textbtn: var(--C-Vesnea_white);
+  --notfound-btn: var(--C-SeaWeb_Purple);
+}
+[data-theme="star"] {
+  /* Star Theme */
+  --navbg: var(--C-SeaWeb_Dark_Purple);
+  --navbg-ext: var(--C-Vesnea_white);
+  --navbg-secondary: color-mix(
+    in srgb,
+    var(--C-Uzakon_Purple) 5%,
+    var(--navbg) 95%
+  );
+  --navbg-secondary-m: color-mix(
+    in srgb,
+    var(--C-SeaWeb_Purple) 10%,
+    var(--navbg) 80%
+  );
+  --navtext-a: var(--C-Uzakon_Light_Purple);
+  --navtext-b: var(--C-Uzakon_Purple);
+  --navtext-accent: var(--C-Vesnea_Pink);
+
+  --footnavtext-a: var(--C-Vesnea_white);
+  --footnavtext-b: var(--C-Korazu_white);
+
+  --bg-color-1: var(--C-SeaWeb_Dark_Purple);
+  --text-color-1a: var(--C-Uzakon_Light_Purple);
+  --text-color-1b: var(--C-Uzakon_Purple);
+
+  --bg-color-2: var(--C-SeaWeb_Dark_Purple);
+  --text-color-2a: var(--C-Uzakon_Light_Purple);
+  --text-color-2b: var(--C-Uzakon_Purple);
+
+  --bg-color-3: var(--C-SeaWeb_Dark_Purple);
+  --text-color-3a: var(--C-Uzakon_Light_Purple);
+  --text-color-3b: var(--C-Uzakon_Purple);
+
+  /* Texts */
+  --text-hover: var(--C-Uzakon_Lighter_Light_Purple);
+
+  /* Buttons */
+  --button-background: var(--bg-color-3);
+  --button-text: var(--C-Uzakon_Purple);
+  --button-border: color-mix(in srgb, var(--C-Uzakon_Purple) 50%, transparent);
+  --button-border2: color-mix(in srgb, var(--C-Uzakon_Purple) 20%, transparent);
+  --button-background-active: color-mix(
+    in srgb,
+    var(--C-Uzakon_Purple) 80%,
+    transparent
+  );
+  --button-text-active: var(--C-Uzakon_White);
+  --button-border-active: var(--C-Uzakon_Purple);
+  --button-border2-active: var(--C-Uzakon_Purple);
+
+  /* Textpanels */
+  --textpanel-background: var(--bg-color-3);
+  --textpanel-text: var(--C-Uzakon_Purple);
+  --textpanel-border: color-mix(
+    in srgb,
+    var(--C-Uzakon_Purple) 20%,
+    transparent
+  );
+  --textpanel-border2: var(--textpanel-border);
+  --textpanel-background-active: color-mix(
+    in srgb,
+    var(--C-Vesnea_Purple) 10%,
+    var(--C-Uzakon_Purple) 40%
+  );
+  --textpanel-text-active: var(--C-Uzakon_Light_Purple);
+  --textpanel-border-active: var(--C-Uzakon_Purple);
+
+  /* Sliders */
+  --slider-background-active: var(--textpanel-background-active);
+
+  /* Charcard */
+  --charcard-bg: var(--C-SeaWeb_Dark_Purple);
+  --charcard-PFPbg: var(--C-SeaWeb_Purple);
+  --charcard-text-prop: color-mix(
+    in srgb,
+    var(--C-Uzakon_Purple) 50%,
+    transparent
+  );
+  --charcard-text-value: var(--C-Uzakon_Purple);
+  --charcard-text-name: var(--C-Uzakon_Light_Purple);
+  --charcard-text-altname: var(--C-Uzakon_Purple);
+  --charcard-border: var(--C-Uzakon_Purple);
+  --charcard-PFPborder: var(--C-Uzakon_Purple);
+  --charcard-closebtn: var(--C-Uzakon_Purple);
+  --charcard-active-tab: var(--C-Uzakon_Purple);
+  --charcard-active-tab-border: var(--C-Uzakon_Purple);
+  --charcard-active-tab-text: var(--C-Uzakon_White);
+
+  --storyfnbar-text: var(--C-Uzakon_Purple);
+  --storyfnbar-text2: var(--C-Uzakon_Purple);
+  --aboutvesnea-bg: var(--C-SeaWeb_Dark_Purple);
+  --aboutvesnea-text: var(--C-Uzakon_Light_Purple);
+  --aboutvesnea-link: var(--C-Uzakon_Purple);
+  --aboutvesnea-cardborder: var(--C-SeaWeb_Purple);
+  --generaltitle-text: var(--C-Uzakon_Light_Purple);
+  --generalcontent-text: var(--C-Uzakon_Light_Purple);
+  --generalcontent-texthover: var(--C-Uzakon_Purple);
+  --generalcontent-textshadow: var(--C-Vesnea_Pink);
+  --poembook-scroll-btn: rgba(0, 0, 0, 0.15);
+  --listseparator-text: color-mix(
+    in srgb,
+    var(--C-Uzakon_Light_Purple) 50%,
+    var(--C-Uzakon_White) 20%
+  );
+  --listseparator-bg: color-mix(
+    in srgb,
+    var(--C-Uzakon_Purple) 30%,
+    var(--C-SeaWeb_Dark_Purple) 70%
+  );
+  --notfound-bg1: var(--C-SeaWeb_Dark_Purple);
+  --notfound-bg2: var(--C-SeaWeb_Dark_Purple);
+  --notfound-text1: var(--C-Uzakon_Lighter_Light_Purple);
+  --notfound-text2: var(--C-Uzakon_Light_Purple);
+  --notfound-textbtn: var(--C-Uzakon_Lighter_Light_Purple);
+  --notfound-btn: var(--C-SeaWeb_Purple);
+}
+
+/* SCROLL BAR */ /* SCROLL BAR */ /* SCROLL BAR */ /* SCROLL BAR */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--C-SeaWeb_Purple);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--C-Uzakon_Light_Purple);
+  border: 3px solid var(--C-SeaWeb_Purple);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--C-Uzakon_Purple);
+}
+* {
+  /* For Firefox (Experimental) */
+  scrollbar-width: thin;
+  scrollbar-color: var(--C-Uzakon_Light_Purple) var(--C-SeaWeb_Purple);
+}
+/* SCROLL BAR */ /* SCROLL BAR */ /* SCROLL BAR */ /* SCROLL BAR */
+
+/* NOT FOUND */ /* NOT FOUND */ /* NOT FOUND */ /* NOT FOUND */
+.not-found {
+  background: linear-gradient(135deg, var(--notfound-bg1), var(--notfound-bg2));
+  font-family: "Comic Sans MS", "Josefin Sans", sans-serif;
+  color: var(--notfound-text1);
+}
+.not-found h1 {
+  font-size: var(--Fs-NotFoundTitle);
+}
+.not-found p {
+  font-size: var(--Fs-NotFoundDesc);
+  color: var(--notfound-text2);
+}
+.not-found a {
+  font-size: var(--Fs-NotFoundBtn);
+  background: var(--notfound-btn);
+  color: var(--notfound-textbtn);
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 0 10px color-mix(in srgb, var(--notfound-btn) 40%, transparent);
+}
+.not-found a:hover {
+  box-shadow: 0 0 10px color-mix(in srgb, var(--notfound-btn) 60%, transparent);
+}
+/* NOT FOUND */ /* NOT FOUND */ /* NOT FOUND */ /* NOT FOUND */
+/* UNDER CONSTRUCTION */ /* UNDER CONSTRUCTION */ /* UNDER CONSTRUCTION */
+.underconstruction {
+  background: linear-gradient(135deg, var(--notfound-bg1), var(--notfound-bg2));
+  font-family: "Comic Sans MS", "Josefin Sans", sans-serif;
+  color: var(--notfound-text1);
+}
+.underconstruction h1 {
+  font-size: calc(var(--Fs-NotFoundTitle) - 42pt);
+}
+.underconstruction p {
+  font-size: var(--Fs-NotFoundDesc);
+  color: var(--notfound-text2);
+}
+.underconstruction a {
+  font-size: var(--Fs-NotFoundBtn);
+  background: var(--notfound-btn);
+  color: var(--notfound-textbtn);
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 0 10px color-mix(in srgb, var(--notfound-btn) 40%, transparent);
+}
+.underconstruction a:hover {
+  box-shadow: 0 0 10px color-mix(in srgb, var(--notfound-btn) 60%, transparent);
+}
+/* UNDER CONSTRUCTION */ /* UNDER CONSTRUCTION */ /* UNDER CONSTRUCTION */
+/* COMMON LAYOUT */ /* COMMON LAYOUT */ /* COMMON LAYOUT */
+.generalbody {
+  background-color: var(--bg-color-1);
+  color: var(--generalcontent-text);
+}
+.generalbigtitle {
+  font-family: "Baskervville", "Noto Serif JP", serif;
+  font-size: var(--Fs-BigTitle);
+  line-height: normal;
+  font-style: normal;
+  text-decoration: initial;
+  color: var(--generaltitle-text);
+}
+.generaltitle {
+  font-size: var(--Fs-Title);
+  line-height: normal;
+  font-style: italic;
+  text-decoration: initial;
+  color: var(--generaltitle-text);
+}
+.generalcontent a {
+  text-decoration: none;
+  color: inherit;
+}
+.generalcontent li:hover {
+  color: var(--generalcontent-texthover);
+  text-shadow: 0 2px 5px
+    color-mix(in srgb, var(--generalcontent-textshadow) 50%, transparent);
+  transform: scale(1.5);
+  font-style: italic;
+}
+.generalcontent li:active {
+  font-weight: bold;
+}
+.listseparator {
+  color: var(--listseparator-text);
+  font-size: var(--Fs-Title);
+  font-style: normal;
+  font-weight: 600;
+  background-color: var(--listseparator-bg);
+  border-radius: 50px 4px;
+}
+.generaldesc-containerwrapper {
+  background-color: var(--bg-color-3);
+}
+.generaldesc-container .label {
+  font-weight: bold;
+  text-align: right;
+}
+.generaldisclaimer {
+  font-size: var(--Fs-Content-small);
+  line-height: 1;
+}
+/* COMMON LAYOUT */ /* COMMON LAYOUT */ /* COMMON LAYOUT */
+/* TOGGLE */ /* TOGGLE */ /* TOGGLE */ /* TOGGLE */ /* TOGGLE */
+* {
+  --toggle-color-active: var(--button-background-active);
+  --toggle-color-inactive: var(--button-background);
+  --toggle-color-switch: var(--C-Vesnea_white);
+  --toggle-color-disabled: #ddd;
+}
+.toggle-switch {
+  text-align: left;
+}
+.toggle-switch-label {
+  border-radius: var(--toggle-border-radius);
+}
+.toggle-switch-inner:before {
+  background-color: var(--toggle-color-active);
+}
+.toggle-switch-inner:after {
+  background-color: var(--toggle-color-inactive);
+}
+.toggle-switch-switch {
+  background: var(--toggle-color-switch);
+  border: 0 solid var(--toggle-color-inactive);
+  border-radius: var(--toggle-border-radius);
+  transition: all 0.1s ease;
+}
+.toggle-switch-disabled {
+  background-color: var(--toggle-color-disabled);
+}
+.toggle-switch-disabled:before {
+  background-color: var(--toggle-color-disabled);
+}
+/* TOGGLE */ /* TOGGLE */ /* TOGGLE */ /* TOGGLE */ /* TOGGLE */
+/* ATTRIBUTES */ /* ATTRIBUTES */ /* ATTRIBUTES */ /* ATTRIBUTES */
+.attribute-badge {
+  font-family: var(--F-Montserrat);
+  font-size: var(--Fs-Content-small);
+  font-style: italic;
+  font-weight: bold;
+  box-shadow: 0 2px 2px
+    color-mix(in srgb, var(--charcard-border) 50%, transparent);
+  border-radius: 6px;
+}
+.attribute-badge.aether {
+  background-color: var(--attribute-aether);
+  color: var(--attribute-text-seawebdarkpurple);
+}
+.attribute-badge.void {
+  background-color: var(--attribute-void);
+  color: var(--attribute-text-vesneawhite);
+}
+.attribute-badge.light {
+  background-color: var(--attribute-light);
+  color: var(--attribute-text-seawebdarkpurple);
+}
+.attribute-badge.darkness {
+  background-color: var(--attribute-darkness);
+  color: var(--attribute-text-vesneawhite);
+}
+.attribute-badge.fire {
+  background-color: var(--attribute-fire);
+  color: var(--attribute-text-vesneawhite);
+}
+.attribute-badge.water {
+  background-color: var(--attribute-water);
+  color: var(--attribute-text-vesneawhite);
+}
+.attribute-badge.nature {
+  background-color: var(--attribute-nature);
+  color: var(--attribute-text-seawebdarkpurple);
+}
+.attribute-badge.metal {
+  background-color: var(--attribute-metal);
+  color: var(--attribute-text-vesneawhite);
+}
+.attribute-badge.electric {
+  background-color: var(--attribute-electric);
+  color: var(--attribute-text-seawebdarkpurple);
+}
+.attribute-badge.wind {
+  background-color: var(--attribute-wind);
+  color: var(--attribute-text-seawebdarkpurple);
+}
+.attribute-badge.magical {
+  background-color: var(--attribute-magical);
+  color: var(--attribute-text-seawebdarkpurple);
+}
+.attribute-badge.psionic {
+  background-color: var(--attribute-psionic);
+  color: var(--attribute-text-vesneawhite);
+}
+.attribute-badge.spirit {
+  background-color: var(--attribute-spirit);
+  color: var(--attribute-text-vesneawhite);
+}
+.attribute-badge.sound {
+  background-color: var(--attribute-sound);
+  color: var(--attribute-text-seawebdarkpurple);
+}
+/* ATTRIBUTES */ /* ATTRIBUTES */ /* ATTRIBUTES */ /* ATTRIBUTES */

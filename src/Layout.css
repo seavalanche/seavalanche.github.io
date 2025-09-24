@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+p {
+  text-indent: 50px;
+  margin-bottom: 15px;
+}
+html {
+  scroll-padding-top: 150px;
+}
+@media only screen and (max-width: 800px) {
+  html {
+    scroll-padding-top: 70px;
+  }
+}
+.textpanel {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.textpanel input {
+  padding: 8px;
+}
+/* @import "react-alice-carousel/lib/alice-carousel.css"; */
+
+/* NOT FOUND */ /* NOT FOUND */ /* NOT FOUND */ /* NOT FOUND */
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 70vh;
+}
+.not-found h1 {
+  margin-bottom: 3rem;
+}
+.not-found p {
+  margin-bottom: 1.5rem;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-indent: initial;
+}
+.not-found a {
+  padding: 0.7rem 1.4rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.not-found a:hover {
+  transform: scale(1.05);
+}
+/* NOT FOUND */ /* NOT FOUND */ /* NOT FOUND */ /* NOT FOUND */
+/* UNDER CONSTRUCTION */ /* UNDER CONSTRUCTION */ /* UNDER CONSTRUCTION */
+.underconstruction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 70vh;
+}
+.underconstruction h1 {
+  margin-bottom: 3rem;
+}
+.underconstruction p {
+  margin-bottom: 1.5rem;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-indent: initial;
+}
+.underconstruction a {
+  padding: 0.7rem 1.4rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.underconstruction a:hover {
+  transform: scale(1.05);
+}
+/* UNDER CONSTRUCTION */ /* UNDER CONSTRUCTION */ /* UNDER CONSTRUCTION */
+
+/* COMMON LAYOUT */ /* COMMON LAYOUT */ /* COMMON LAYOUT */
+.generalbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 30px 0 30px 0;
+  gap: 15px;
+}
+.generalbigtitle,
+.generaltitle {
+  max-width: 1000px;
+}
+.generalbigtitle,
+.generaltitle,
+.generalcontent {
+  margin: 0 20px 0 20px;
+  text-align: center;
+}
+.generalcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+.generalcontent ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+}
+.generalcontent li {
+  text-align: center;
+  margin: 0 20px 0 20px;
+}
+.listseparator {
+  min-height: 2.5rem;
+  align-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  min-width: min(500px, 95vw);
+}
+.listseparator.first {
+  margin-top: 0px;
+}
+.generaldesc-containerwrapper {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.generaldesc-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr;
+  gap: 15px 10px;
+  max-width: 600px;
+  justify-content: center;
+  margin: 15px auto;
+  padding: 35px;
+}
+.generaldesc-container .label {
+  padding-right: 15px;
+}
+.generaldesc.generalcontent {
+  max-width: 800px;
+  text-align: start;
+  margin-bottom: 15px;
+}
+@media only screen and (max-width: 800px) {
+  .generaldesc-container {
+    margin: 0 auto;
+    gap: 10px 5px;
+    padding: 15px;
+  }
+  .generaldesc-container .label {
+    padding-right: 5px;
+  }
+}
+/* COMMON LAYOUT */ /* COMMON LAYOUT */ /* COMMON LAYOUT */
+/* TOGGLE */ /* TOGGLE */ /* TOGGLE */ /* TOGGLE */ /* TOGGLE */
+* {
+  --toggle-height: 30px;
+  --toggle-ratio: 1.8;
+  --toggle-border-radius: 4px;
+  --toggle-width: calc(var(--toggle-height) * var(--toggle-ratio));
+  --toggle-switch-size: calc(var(--toggle-height) * 24 / 34);
+  --toggle-switch-margin: calc(var(--toggle-height) * 5 / 34);
+}
+.toggle-switch {
+  user-select: none;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  left: calc(var(--toggle-width) * 2 / 3);
+  width: var(--toggle-width);
+}
+.toggle-switch-checkbox {
+  display: none;
+}
+.toggle-switch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 0;
+}
+.toggle-switch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: all 0.1s ease;
+}
+.toggle-switch-inner:before,
+.toggle-switch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: var(--toggle-height);
+  box-sizing: border-box;
+  content: "";
+}
+.toggle-switch-switch {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: calc(
+    var(--toggle-width) - var(--toggle-switch-size) -
+      var(--toggle-switch-margin) * 2
+  );
+  width: var(--toggle-switch-size);
+  margin: var(--toggle-switch-margin);
+}
+.toggle-switch-disabled {
+  cursor: not-allowed;
+}
+.toggle-switch-disabled:before {
+  cursor: not-allowed;
+}
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-inner {
+  margin-left: 0;
+}
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
+  right: 0px;
+}
+/* TOGGLE */ /* TOGGLE */ /* TOGGLE */ /* TOGGLE */ /* TOGGLE */
+/* ATTRIBUTES */ /* ATTRIBUTES */ /* ATTRIBUTES */ /* ATTRIBUTES */
+* {
+  --attribute-padding-top-bot: 4px;
+  --attribute-padding-left-right: 10px;
+  --attribute-width: 75px;
+  --attribute-height: 25px;
+}
+.attribute-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: var(--attribute-width);
+  height: var(--attribute-height);
+  padding: var(--attribute-padding-top-bot) var(--attribute-padding-left-right);
+}
+@media only screen and (max-width: 800px) {
+* {
+  --attribute-padding-top-bot: 2px;
+  --attribute-padding-left-right: 10px;
+  --attribute-width: 50px;
+  --attribute-height: 20px;
+}
+}
+/* ATTRIBUTES */ /* ATTRIBUTES */ /* ATTRIBUTES */ /* ATTRIBUTES */
