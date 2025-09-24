@@ -18,6 +18,11 @@ function NewsSection() {
                 });
                 setNews(parsed);
 
+                // Sort newest to oldest
+                parsed.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                setNews(parsed);
+
                 // Collect unique tags
                 const allTags = parsed.flatMap(item => item.tags);
                 setTags(["all", ...new Set(allTags)]);
