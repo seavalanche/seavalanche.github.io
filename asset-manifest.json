@@ -1,27 +1,39 @@
 {
   "files": {
-    "main.css": "/static/css/main.1df3cf9c.css",
-    "main.js": "/static/js/main.6605e315.js",
+    "main.css": "/static/css/main.78decd71.css",
+    "main.js": "/static/js/main.2bc4c682.js",
     "static/js/453.0e05bbf3.chunk.js": "/static/js/453.0e05bbf3.chunk.js",
     "static/media/Montserrat-VariableFont_wght.ttf": "/static/media/Montserrat-VariableFont_wght.3faa3eef13649db02044.ttf",
     "static/media/InterTight-ExtraLightItalic.ttf": "/static/media/InterTight-ExtraLightItalic.3c6ce928529a7f898efe.ttf",
     "static/media/OpenDyslexic-Regular.otf": "/static/media/OpenDyslexic-Regular.1455ef8fec0fedff22cc.otf",
     "static/media/Montserrat-SemiBold.ttf": "/static/media/Montserrat-SemiBold.d5e0cc788cba9ced1fb9.ttf",
     "static/media/JosefinSans-Italic-VariableFont_wght.ttf": "/static/media/JosefinSans-Italic-VariableFont_wght.d96bb2f98cb3d0d8ee06.ttf",
+    "static/media/Header_pfp_1.png": "/static/media/Header_pfp_1.eb946313c1fb94019b56.png",
+    "static/media/Header_pfp_4.png": "/static/media/Header_pfp_4.433c920dfdc0cb81c805.png",
+    "static/media/Header_pfp_3.png": "/static/media/Header_pfp_3.abd7207ce27b3dc0ed0b.png",
     "static/media/Baskervville-Regular.ttf": "/static/media/Baskervville-Regular.f901739d83410218a9d2.ttf",
+    "static/media/Header_home_light.png": "/static/media/Header_home_light.6488768b9977e415f3af.png",
+    "static/media/Header_home_dark.png": "/static/media/Header_home_dark.0e2987d27ea0aa609c2e.png",
+    "static/media/Header_home_star.png": "/static/media/Header_home_star.6a53fde1194f83c54889.png",
     "static/media/VesBG_2.webp": "/static/media/VesBG_2.7744be6b62d168f42e33.webp",
-    "static/media/VesBG_3.webp": "/static/media/VesBG_3.3b5bf7de01b2b39ba04b.webp",
+    "static/media/VesBG_1.webp": "/static/media/VesBG_1.e3926c46173ca9e5d14d.webp",
+    "static/media/Header_bsky_dark.svg": "/static/media/Header_bsky_dark.8e57e5b6a8848f85d172.svg",
+    "static/media/Header_bsky_light.svg": "/static/media/Header_bsky_light.38040b165565b61cbac5.svg",
+    "static/media/Header_bsky_star.svg": "/static/media/Header_bsky_star.73071dd55cc6b5b70905.svg",
+    "static/media/Header_kofi_dark.svg": "/static/media/Header_kofi_dark.505d87d8a198035cb128.svg",
+    "static/media/Header_kofi_light.svg": "/static/media/Header_kofi_light.09aa42383ac88293f01e.svg",
+    "static/media/Header_kofi_star.svg": "/static/media/Header_kofi_star.eb5f55affe9634941783.svg",
     "static/media/KorazuSun.svg": "/static/media/KorazuSun.8d3f9935c8c5ccc2ddfb.svg",
     "static/media/VesBG_1b.webp": "/static/media/VesBG_1b.86d33ec18ae3ca6aeb68.webp",
     "static/media/UzakonMoon.svg": "/static/media/UzakonMoon.d7b378fb74cf9cf0c6cd.svg",
     "index.html": "/index.html",
     "static/media/ZumikoStar.svg": "/static/media/ZumikoStar.bd6efe0ef31e91542c51.svg",
-    "main.1df3cf9c.css.map": "/static/css/main.1df3cf9c.css.map",
-    "main.6605e315.js.map": "/static/js/main.6605e315.js.map",
+    "main.78decd71.css.map": "/static/css/main.78decd71.css.map",
+    "main.2bc4c682.js.map": "/static/js/main.2bc4c682.js.map",
     "453.0e05bbf3.chunk.js.map": "/static/js/453.0e05bbf3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1df3cf9c.css",
-    "static/js/main.6605e315.js"
+    "static/css/main.78decd71.css",
+    "static/js/main.2bc4c682.js"
   ]
 }
