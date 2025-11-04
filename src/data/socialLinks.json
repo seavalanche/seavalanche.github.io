@@ -153,5 +153,25 @@
     "name": "Art Fight",
     "url": "https://artfight.net/~vesnea",
     "status": "active"
+  },
+  {
+    "name": "Github (seavalanche)",
+    "url": "https://github.com/seavalanche/",
+    "status": "active"
+  },
+  {
+    "name": "Github (korazu)",
+    "url": "https://github.com/Korazu-seavalanche/",
+    "status": "inactive"
+  },
+  {
+    "name": "Github (uzakon)",
+    "url": "https://github.com/Uzakon-seavalanche/",
+    "status": "inactive"
+  },
+  {
+    "name": "Github (zumiko)",
+    "url": "https://github.com/Zumiko-seavalanche/",
+    "status": "inactive"
   }
 ]
