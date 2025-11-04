@@ -3,8 +3,10 @@ import './Theme.css';
 import './Layout.css';
 import './css/themebtn.css';
 import './Components/NewsSection'
+import './Components/LandingExtLinks'
 import React, { useState } from "react";
 import NewsSection from './Components/NewsSection';
+import LandingExtLinks from './Components/LandingExtLinks';
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -62,6 +64,7 @@ function App() {
               <div className='social-linkname'>Seavalanche's Bluesky</div>
             </a>
           </div>
+          <LandingExtLinks />
         </div>
         <div className='landing-theme-selection'>
           <button className="landing-theme-button landingbtn1" onClick={() => toggleTheme("light")} aria-label="Switch Theme" />

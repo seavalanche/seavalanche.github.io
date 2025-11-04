@@ -7,6 +7,10 @@
   --secondary-font-color: var(--C-SeaWeb_Purple);
   --onaccent-font-color: var(--C-SeaWeb_Purple);
   --asaccent-font-color: var(--cutepink2);
+  --active-color: hsl(from var(--attribute-nature) h s calc(l - 15) / 1);
+  --deactivated-color: hsl(from var(--attribute-metal) h s l / 0.5);
+  --inactive-color: hsl(from var(--attribute-metal) h s l / 0.5);
+  --private-color: hsl(from var(--attribute-sound) h s calc(l - 15) / 1);
 
   --landing-padding: 20px;
   --landing-padding2: calc(var(--landing-padding) / 2);
@@ -30,6 +34,15 @@
   --linkicon-home: url(../Assets/Header/Header_home_light.png);
   --linkicon-kofi: url(../Assets/Header/Header_kofi_light.svg);
   --linkicon-bsky: url(../Assets/Header/Header_bsky_light.svg);
+  --landing-extlinks-color: color-mix(
+    in srgb,
+    var(--main-accent-color) 50%,
+    var(--main-color) 50%
+  );
+  --landing-extlinks-hover-color: hsl(
+    from var(--secondary-accent-color) h s l / 1
+  );
+  --landing-extlinks-hover-color: var(--secondary-accent-color);
 }
 [data-theme="dark"] {
   --main-color: var(--C-SeaWeb_Purple);
@@ -40,6 +53,10 @@
   --secondary-font-color: var(--C-Vesnea_white);
   --onaccent-font-color: var(--C-SeaWeb_Purple);
   --asaccent-font-color: var(--C-Korazu_Yellow);
+  --active-color: var(--attribute-nature);
+  --deactivated-color: var(--attribute-metal);
+  --inactive-color: var(--attribute-metal);
+  --private-color: var(--attribute-sound);
 
   --landing-profile-color: hsl(from var(--main-accent-color) h s l / 0.3);
   --landing-pfp: url(../Assets//Header/Header_pfp_3.png);
@@ -47,6 +64,10 @@
   --linkicon-home: url(../Assets/Header/Header_home_dark.png);
   --linkicon-kofi: url(../Assets/Header/Header_kofi_dark.svg);
   --linkicon-bsky: url(../Assets/Header/Header_bsky_dark.svg);
+  --landing-extlinks-color: hsl(from var(--secondary-color) h s l / 0.5);
+  --landing-extlinks-hover-color: hsl(
+    from var(--secondary-accent-color) h s l / 0.3
+  );
 }
 [data-theme="star"] {
   --main-color: var(--C-SeaWeb_Dark_Purple);
@@ -57,6 +78,10 @@
   --secondary-font-color: var(--C-Uzakon_Purple);
   --onaccent-font-color: var(--C-SeaWeb_Purple);
   --asaccent-font-color: var(--C-Zumiko_Red);
+  --active-color: var(--attribute-nature);
+  --deactivated-color: var(--attribute-metal);
+  --inactive-color: var(--attribute-metal);
+  --private-color: var(--attribute-sound);
 
   --landing-profile-color: hsl(from var(--C-SeaWeb_Purple) h s l / 0.5);
   --landing-pfp: url(../Assets//Header/Header_pfp_4.png);
@@ -64,6 +89,10 @@
   --linkicon-home: url(../Assets/Header/Header_home_star.png);
   --linkicon-kofi: url(../Assets/Header/Header_kofi_star.svg);
   --linkicon-bsky: url(../Assets/Header/Header_bsky_star.svg);
+  --landing-extlinks-color: hsl(from var(--secondary-color) h s l / 0.5);
+  --landing-extlinks-hover-color: hsl(
+    from var(--secondary-accent-color) h s l / 0.3
+  );
 }
 .landing-container {
   display: flex;
@@ -100,7 +129,7 @@
   padding-top: 0;
   overflow: hidden;
 }
-.landing-container{
+.landing-container {
   flex: 1 100%;
 }
 .landing-card.header {
