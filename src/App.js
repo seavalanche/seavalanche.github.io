@@ -48,6 +48,14 @@ function App() {
       <div className='landing-container-header'>
         <div className='landing-card header'>
           <div className='landing-profile'>
+            <div className='pfp-overlay'>
+              <div className='pfpzone A0' />
+              <div className='pfpzone C0' />
+              <div className='pfpzone B0' />
+              <div className='pfpzone A1' />
+              <div className='pfpzone C1' />
+              <div className='pfpzone B1' />
+            </div>
             <div className='landing-pfp' />
             <div className='landing-name'>veslogo3</div>
             <div className='landing-bio'>Call me Vesnea! - She/Her</div>
