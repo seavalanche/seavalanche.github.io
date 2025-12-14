@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2f600c6c.css",
-    "main.js": "/static/js/main.4dac3650.js",
+    "main.css": "/static/css/main.71edbc53.css",
+    "main.js": "/static/js/main.3b7d6df1.js",
     "static/js/453.0e05bbf3.chunk.js": "/static/js/453.0e05bbf3.chunk.js",
     "static/media/Montserrat-VariableFont_wght.ttf": "/static/media/Montserrat-VariableFont_wght.3faa3eef13649db02044.ttf",
     "static/media/InterTight-ExtraLightItalic.ttf": "/static/media/InterTight-ExtraLightItalic.3c6ce928529a7f898efe.ttf",
@@ -35,12 +35,12 @@
     "static/media/VesBG_1b.webp": "/static/media/VesBG_1b.86d33ec18ae3ca6aeb68.webp",
     "static/media/UzakonMoon.svg": "/static/media/UzakonMoon.d7b378fb74cf9cf0c6cd.svg",
     "static/media/ZumikoStar.svg": "/static/media/ZumikoStar.bd6efe0ef31e91542c51.svg",
-    "main.2f600c6c.css.map": "/static/css/main.2f600c6c.css.map",
-    "main.4dac3650.js.map": "/static/js/main.4dac3650.js.map",
+    "main.71edbc53.css.map": "/static/css/main.71edbc53.css.map",
+    "main.3b7d6df1.js.map": "/static/js/main.3b7d6df1.js.map",
     "453.0e05bbf3.chunk.js.map": "/static/js/453.0e05bbf3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f600c6c.css",
-    "static/js/main.4dac3650.js"
+    "static/css/main.71edbc53.css",
+    "static/js/main.3b7d6df1.js"
   ]
 }
