@@ -51,10 +51,58 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="Vesnea wrote all of the ReactJS so you can enjoy her beautiful website ✨"
+    />
     <title>Seavalanche's Landing page</title>
+    <link rel="stylesheet" href="%PUBLIC_URL%/noscript-files/noscript.css" />
+
+    <script>
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Hina+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Quicksand&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <noscript>Please enable JavaScript to view the page💕</noscript>
+    <noscript>
+      <div class="noscript-message">
+        I created this website using <strong>ReactJS</strong> 💕
+
+        <a
+          href="https://bsky.app/profile/seavalanche.bsky.social"
+          title="Follow me on Bluesky 💖"
+          class="noscript-pfp-link"
+        >
+          <img
+            src="%PUBLIC_URL%/noscript-files/noscript-pfp.png"
+            alt="Me, Vesnea"
+            class="noscript-pfp"
+          />
+        </a>
+        <div class="noscript-message-pfp">Vesnea</div>
+
+        <div class="noscript-message-sub">
+          Please enable JavaScript to experience the full magic, thank you~! ✨
+        </div>
+      </div>
+    </noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.
