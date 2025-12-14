@@ -136,7 +136,9 @@
 }
 .LP-card-title {
   font-family: "SeavalancheFont";
-  font-size: 20pt;
+  font-size: 22pt;
+  letter-spacing: 1px;
+  font-weight: 600;
   color: var(--main-font-color);
   padding-bottom: var(--landing-padding3);
   text-align: center;
@@ -189,25 +191,27 @@
   max-width: 90%;
 }
 .social-home {
-  font-size: 14pt;
+  font-family: "SeavalancheFont";
+  font-size: 24pt;
+  letter-spacing: 1px;
   font-weight: 600;
   text-decoration: none;
   color: var(--main-font-color);
   gap: var(--landing-padding3);
-  /* padding: var(--landing-padding4) 0; */
   display: inline-flex;
   align-items: center;
   overflow: hidden;
   border-radius: 8px;
   transition: width 0.3s ease;
-  /* width: 50px; */
   position: relative;
   width: 285px;
   background-color: var(--card-hover-color);
   padding: var(--landing-padding4) var(--landing-padding3);
 }
 .social-links {
-  font-size: 14pt;
+  font-family: "SeavalancheFont";
+  font-size: 24pt;
+  letter-spacing: 1px;
   font-weight: 600;
   text-decoration: none;
   color: var(--main-font-color);
@@ -270,7 +274,7 @@
   padding: var(--landing-padding4) var(--landing-padding3);
 }
 .social-links.kofi:hover {
-  width: 255px;
+  width: 265px;
 }
 .social-links:hover .social-linkname {
   opacity: 1;
@@ -391,6 +395,7 @@
 .NS-title {
   font-family: "SeavalancheFont";
   font-size: 32pt;
+  letter-spacing: 1px;
   margin: 0 0 10px;
   color: var(--asaccent-font-color);
   width: 100%;

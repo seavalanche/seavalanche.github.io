@@ -33,7 +33,6 @@
 html {
   font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
   font-size: var(--Fs-Content);
-  /* font-size: calc(var(--Fs-Content) + 6pt); */
   line-height: 20pt;
   text-decoration: initial;
   font-weight: 300;
