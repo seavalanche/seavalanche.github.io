@@ -396,6 +396,7 @@
   font-family: "SeavalancheFont";
   font-size: 32pt;
   letter-spacing: 1px;
+  line-height: 40px;
   margin: 0 0 10px;
   color: var(--asaccent-font-color);
   width: 100%;
