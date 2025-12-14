@@ -1,6 +1,7 @@
 import './css/main.css';
-import './Theme.css';
-import './Layout.css';
+import './css/theme.css';
+import './css/layout.css';
+import './css/font.css';
 import './css/themebtn.css';
 import './Components/NewsSection'
 import './Components/LandingExtLinks'
@@ -48,12 +49,12 @@ function App() {
       <div className='landing-card header'>
         <div className='landing-profile'>
           <div className='landing-pfp' />
-          <div className='landing-name'>Seavalanche</div>
+          <div className='landing-name'>veslogo3</div>
           <div className='landing-bio'>Call me Vesnea! - She/Her</div>
           <div className='landing-socials'>
-            <a className='social-links home' href='https://seavalanche.github.io/projectseaweb' target='_blank' rel="noreferrer">
-              <div className='social-linkicon home'></div>
-              <div className='social-linkname'>Seavalanche's Website</div>
+            <a className='social-home' href='https://seavalanche.github.io/projectseaweb' target='_blank' rel="noreferrer">
+              <div className='social-home-icon'></div>
+              <div className='social-home-name'>Seavalanche's Website</div>
             </a>
             <a className='social-links kofi' href='https://ko-fi.com/seavalanche' target='_blank' rel="noreferrer">
               <div className='social-linkicon kofi'></div>
@@ -73,7 +74,7 @@ function App() {
         </div>
       </div>
       <a className='landing-card charicons' href='https://seavalanche.github.io/projectseaweb/#/CharInfo' target='_blank' rel="noreferrer">
-        <div className='charicons-title'>Seavalanche Characters</div>
+        <div className='LP-card-title'>Seavalanche Characters</div>
         <div className='charicons-wrapper mainchar'>
           {charicons1.map((icon, i) => {
             const name = icon

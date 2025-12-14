@@ -1,0 +1,229 @@
+@font-face {
+  font-family: "F-Navbar";
+  src: url(../Assets/Fonts/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "F-NavbarTitle";
+  src: url(../Assets/Fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: "F-BigTitle";
+  src: url(../Assets/Fonts/Baskervville-Regular.ttf);
+}
+@font-face {
+  font-family: "F-Content";
+  src: url(../Assets/Fonts/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "F-Link";
+  src: url(../Assets/Fonts/InterTight-ExtraLightItalic.ttf);
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url(../Assets/Fonts/OpenDyslexic-Regular.otf);
+}
+@font-face {
+  font-family: "F-AboutVesnea";
+  src: url(../Assets/Fonts/JosefinSans-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "SeavalancheFont";
+  src: url(../Assets/Fonts/Seavalanche_Font.ttf);
+}
+html {
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  font-size: var(--Fs-Content);
+  /* font-size: calc(var(--Fs-Content) + 6pt); */
+  line-height: 20pt;
+  text-decoration: initial;
+  font-weight: 300;
+}
+.bigtitle {
+  font-family: "Baskervville", "Noto Serif JP", serif;
+  font-size: var(--Fs-BigTitle);
+  line-height: normal;
+  font-style: normal;
+  text-decoration: initial;
+}
+.title {
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  font-size: var(--Fs-Title);
+  line-height: normal;
+  font-style: italic;
+  text-decoration: initial;
+}
+.fnbar {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-size: var(--Fs-Content-small);
+  line-height: normal;
+  text-decoration: initial;
+}
+.textpanel input {
+  font-family: var(--F-TextPanel);
+  font-size: var(--Fs-Content);
+}
+button {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-size: var(--Fs-Content-small);
+}
+button:hover,
+button:active {
+  font-style: oblique;
+}
+
+.josefin-sans-AboutVesnea {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+.noto-sans-jp {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+}
+.noto-serif-jp {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+}
+.biz-udpmincho-regular {
+  font-family: "BIZ UDPMincho", serif;
+  font-weight: 400;
+}
+
+/* Variable setting*/
+* {
+  --F-Montserrat: "Montserrat", "Noto Sans JP", sans-serif;
+  --F-Footbar: "Josefin Sans", "Noto Sans JP", sans-serif;
+  --F-Default: "Josefin Sans", "Noto Sans JP", sans-serif;
+  --F-CharCard: "Crimson Pro", "BIZ UDPMincho", serif;
+  --F-TextPanel: "Josefin Sans", "Noto Sans JP", sans-serif;
+  --F-AboutVesnea: "Josefin Sans", "Noto Sans JP", sans-serif;
+  /* Story page */
+  --content-padding: 22vw;
+  --line-height: 1.6;
+  --paragraph-gap: 10px;
+  --letter-spacing: 1px;
+  --word-spacing: 0px;
+  /* Poem page */
+  --content-padding2: 32vw;
+  --line-height2: 1.6;
+  --paragraph-gap2: 10px;
+  --letter-spacing2: 1px;
+  --word-spacing2: 0px;
+}
+@media only screen and (max-width: 1715px) {
+  * {
+    --content-padding: 10vw;
+    --content-padding2: 10vw;
+  }
+}
+
+/* These are the standard font sizes*/
+* {
+  --Fs-Navbar: 13pt;
+  --Fs-Footbar: 12pt;
+  --Fs-NavbarTitle: 18pt;
+  --Fs-BigTitle: 48pt;
+  --Fs-Title: 24pt;
+  --Fs-ContentTitle: 18pt;
+  --Fs-Content: 18pt;
+  --Fs-Content-small: 12pt;
+  --Fs-Content-smaller: 10pt;
+  --Fs-AboutVesneaTitle: 24pt;
+  --Fs-NotFoundTitle: 6rem;
+  --Fs-NotFoundDesc: 1.5rem;
+  --Fs-NotFoundBtn: 1.2rem;
+}
+@media only screen and (max-width: 800px) {
+  * {
+    --Fs-Navbar: 12pt;
+    --Fs-Footbar: 12pt;
+    --Fs-NavbarTitle: 18pt;
+    --Fs-BigTitle: 24pt;
+    --Fs-Title: 20pt;
+    --Fs-ContentTitle: 18pt;
+    --Fs-Content: 12pt;
+    --Fs-Content-small: 10pt;
+    --Fs-Content-smaller: 8pt;
+    --Fs-AboutVesneaTitle: 16pt;
+  }
+}
+
+/*These are font sizer*/
+* {
+  --Fs-FontsizeS: 4pt;
+  --Fs-FontsizeM: 8pt;
+}
+
+/* NOT FOUND */ /* NOT FOUND */ /* NOT FOUND */ /* NOT FOUND */
+.not-found {
+  font-family: "Comic Sans MS", "Josefin Sans", sans-serif;
+}
+.not-found h1 {
+  font-size: var(--Fs-NotFoundTitle);
+}
+.not-found p {
+  font-size: var(--Fs-NotFoundDesc);
+}
+.not-found a {
+  font-size: var(--Fs-NotFoundBtn);
+  text-decoration: none;
+}
+/* NOT FOUND */ /* NOT FOUND */ /* NOT FOUND */ /* NOT FOUND */
+/* UNDER CONSTRUCTION */ /* UNDER CONSTRUCTION */ /* UNDER CONSTRUCTION */
+.underconstruction {
+  font-family: "Comic Sans MS", "Josefin Sans", sans-serif;
+}
+.underconstruction h1 {
+  font-size: calc(var(--Fs-NotFoundTitle) - 42pt);
+}
+.underconstruction p {
+  font-size: var(--Fs-NotFoundDesc);
+}
+.underconstruction a {
+  font-size: var(--Fs-NotFoundBtn);
+  text-decoration: none;
+}
+/* UNDER CONSTRUCTION */ /* UNDER CONSTRUCTION */ /* UNDER CONSTRUCTION */
+/* COMMON LAYOUT */ /* COMMON LAYOUT */ /* COMMON LAYOUT */
+.generalbigtitle {
+  font-family: "Baskervville", "Noto Serif JP", serif;
+  font-size: var(--Fs-BigTitle);
+  line-height: normal;
+  font-style: normal;
+  text-decoration: initial;
+}
+.generaltitle {
+  font-size: var(--Fs-Title);
+  line-height: normal;
+  font-style: italic;
+  text-decoration: initial;
+}
+.generalcontent a {
+  text-decoration: none;
+}
+.generalcontent li:hover {
+  font-style: italic;
+}
+.generalcontent li:active {
+  font-weight: bold;
+}
+.listseparator {
+  font-size: var(--Fs-Title);
+  font-style: normal;
+  font-weight: 600;
+}
+.generaldesc-container .label {
+  font-weight: bold;
+}
+.generaldisclaimer {
+  font-size: var(--Fs-Content-small);
+  line-height: 1;
+}
+/* COMMON LAYOUT */ /* COMMON LAYOUT */ /* COMMON LAYOUT */
+/* ATTRIBUTES */ /* ATTRIBUTES */ /* ATTRIBUTES */ /* ATTRIBUTES */
+.attribute-badge {
+  font-family: var(--F-Montserrat);
+  font-size: var(--Fs-Content-small);
+  font-style: italic;
+  font-weight: bold;
+}
+/* ATTRIBUTES */ /* ATTRIBUTES */ /* ATTRIBUTES */ /* ATTRIBUTES */

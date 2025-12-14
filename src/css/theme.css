@@ -1,195 +1,12 @@
-@font-face {
-  font-family: "F-Navbar";
-  src: url(./Assets/Fonts/Montserrat-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: "F-NavbarTitle";
-  src: url(./Assets/Fonts/Montserrat-SemiBold.ttf);
-}
-
-@font-face {
-  font-family: "F-BigTitle";
-  src: url(./Assets/Fonts/Baskervville-Regular.ttf);
-}
-
-@font-face {
-  font-family: "F-Content";
-  src: url(./Assets/Fonts/Montserrat-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: "F-Link";
-  src: url(./Assets/Fonts/InterTight-ExtraLightItalic.ttf);
-}
-
-@font-face {
-  font-family: "OpenDyslexic";
-  src: url(./Assets/Fonts/OpenDyslexic-Regular.otf);
-}
-@font-face {
-  font-family: "F-AboutVesnea";
-  src: url(./Assets/Fonts/JosefinSans-Italic-VariableFont_wght.ttf);
-}
 html {
-  scroll-behavior: smooth;
-  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
-  font-size: var(--Fs-Content);
-  line-height: 20pt;
-  text-decoration: initial;
-  font-weight: 300;
-  background-image: url("./Assets/Common/VesBG_1b.webp");
+  background-image: url("../Assets/Common/VesBG_1b.webp");
   background-size: 12%;
 }
 html[data-theme="dark"] {
-  background-image: url("./Assets/Common/VesBG_1.webp");
+  background-image: url("../Assets/Common/VesBG_1.webp");
 }
 html[data-theme="star"] {
-  background-image: url("./Assets/Common/VesBG_2.webp");
-}
-.bigtitle {
-  font-family: "Baskervville", "Noto Serif JP", serif;
-  font-size: var(--Fs-BigTitle);
-  line-height: normal;
-  font-style: normal;
-  text-decoration: initial;
-}
-.title {
-  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
-  font-size: var(--Fs-Title);
-  line-height: normal;
-  font-style: italic;
-  text-decoration: initial;
-}
-.fnbar {
-  font-family: "Montserrat", "Noto Sans JP", sans-serif;
-  font-size: var(--Fs-Content-small);
-  line-height: normal;
-  text-decoration: initial;
-}
-.textpanel {
-  border-bottom: 1px dashed var(--textpanel-border);
-}
-.textpanel input {
-  background-color: var(--textpanel-background);
-  font-family: var(--F-TextPanel);
-  font-size: var(--Fs-Content);
-  color: var(--textpanel-text);
-  border: 1px solid var(--textpanel-border2);
-  border-radius: 4px;
-  outline: none;
-}
-.textpanel input:hover,
-input:focus {
-  background-color: var(--textpanel-background-active);
-  color: var(--textpanel-text-active);
-  border: 1px solid var(--textpanel-border-active);
-  box-shadow: 0 8px 12px
-    color-mix(in srgb, var(--textpanel-border-active) 50%, transparent);
-}
-button {
-  background-color: var(--button-background);
-  font-family: "Montserrat", "Noto Sans JP", sans-serif;
-  font-size: var(--Fs-Content-small);
-  color: var(--button-text);
-  cursor: pointer;
-  border: 1px solid var(--button-border2);
-  border-radius: 5px;
-}
-button:hover,
-button:active {
-  background-color: var(--button-background-active);
-  color: var(--button-text-active);
-  font-style: oblique;
-  border: 1px solid var(--button-border2-active);
-  box-shadow: 0 8px 12px
-    color-mix(in srgb, var(--button-border2-active) 50%, transparent);
-}
-input[type="color"] {
-  border-radius: 5px;
-  border: 2px solid var(--bg-color-1);
-}
-
-.josefin-sans-AboutVesnea {
-  font-family: "Josefin Sans", sans-serif;
-  font-optical-sizing: auto;
-}
-.noto-sans-jp {
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
-}
-.noto-serif-jp {
-  font-family: "Noto Serif JP", serif;
-  font-optical-sizing: auto;
-}
-.biz-udpmincho-regular {
-  font-family: "BIZ UDPMincho", serif;
-  font-weight: 400;
-}
-
-/* Variable setting*/
-* {
-  --F-Montserrat: "Montserrat", "Noto Sans JP", sans-serif;
-  --F-Footbar: "Josefin Sans", "Noto Sans JP", sans-serif;
-  --F-Default: "Josefin Sans", "Noto Sans JP", sans-serif;
-  --F-CharCard: "Crimson Pro", "BIZ UDPMincho", serif;
-  --F-TextPanel: "Josefin Sans", "Noto Sans JP", sans-serif;
-  --F-AboutVesnea: "Josefin Sans", "Noto Sans JP", sans-serif;
-  /* Story page */
-  --content-padding: 22vw;
-  --line-height: 1.6;
-  --paragraph-gap: 10px;
-  --letter-spacing: 1px;
-  --word-spacing: 0px;
-  /* Poem page */
-  --content-padding2: 32vw;
-  --line-height2: 1.6;
-  --paragraph-gap2: 10px;
-  --letter-spacing2: 1px;
-  --word-spacing2: 0px;
-}
-@media only screen and (max-width: 1715px) {
-  * {
-    --content-padding: 10vw;
-    --content-padding2: 10vw;
-  }
-}
-
-/* These are the standard font sizes*/
-* {
-  --Fs-Navbar: 13pt;
-  --Fs-Footbar: 12pt;
-  --Fs-NavbarTitle: 18pt;
-  --Fs-BigTitle: 48pt;
-  --Fs-Title: 24pt;
-  --Fs-ContentTitle: 18pt;
-  --Fs-Content: 18pt;
-  --Fs-Content-small: 12pt;
-  --Fs-Content-smaller: 10pt;
-  --Fs-AboutVesneaTitle: 24pt;
-  --Fs-NotFoundTitle: 6rem;
-  --Fs-NotFoundDesc: 1.5rem;
-  --Fs-NotFoundBtn: 1.2rem;
-}
-@media only screen and (max-width: 800px) {
-  * {
-    --Fs-Navbar: 12pt;
-    --Fs-Footbar: 12pt;
-    --Fs-NavbarTitle: 18pt;
-    --Fs-BigTitle: 24pt;
-    --Fs-Title: 20pt;
-    --Fs-ContentTitle: 18pt;
-    --Fs-Content: 12pt;
-    --Fs-Content-small: 10pt;
-    --Fs-Content-smaller: 8pt;
-    --Fs-AboutVesneaTitle: 16pt;
-  }
-}
-
-/*These are font sizer*/
-* {
-  --Fs-FontsizeS: 4pt;
-  --Fs-FontsizeM: 8pt;
+  background-image: url("../Assets/Common/VesBG_2.webp");
 }
 
 /*These are the color palette*/
@@ -632,10 +449,45 @@ input[type="color"] {
   --notfound-btn: var(--C-SeaWeb_Purple);
 }
 
-/* SCROLL BAR */ /* SCROLL BAR */ /* SCROLL BAR */ /* SCROLL BAR */
-::-webkit-scrollbar {
-  width: 12px;
+/* TEXTPANEL, BUTTON, INPUT */ /* TEXTPANEL, BUTTON, INPUT */
+.textpanel {
+  border-bottom: 1px dashed var(--textpanel-border);
 }
+.textpanel input {
+  background-color: var(--textpanel-background);
+  color: var(--textpanel-text);
+  border: 1px solid var(--textpanel-border2);
+  border-radius: 4px;
+  outline: none;
+}
+.textpanel input:hover,
+input:focus {
+  background-color: var(--textpanel-background-active);
+  color: var(--textpanel-text-active);
+  border: 1px solid var(--textpanel-border-active);
+  box-shadow: 0 8px 12px
+    color-mix(in srgb, var(--textpanel-border-active) 50%, transparent);
+}
+button {
+  background-color: var(--button-background);
+  color: var(--button-text);
+  border: 1px solid var(--button-border2);
+  border-radius: 5px;
+}
+button:hover,
+button:active {
+  background-color: var(--button-background-active);
+  color: var(--button-text-active);
+  border: 1px solid var(--button-border2-active);
+  box-shadow: 0 8px 12px
+    color-mix(in srgb, var(--button-border2-active) 50%, transparent);
+}
+input[type="color"] {
+  border-radius: 5px;
+  border: 2px solid var(--bg-color-1);
+}
+/* TEXTPANEL, BUTTON, INPUT */ /* TEXTPANEL, BUTTON, INPUT */
+/* SCROLL BAR */ /* SCROLL BAR */ /* SCROLL BAR */ /* SCROLL BAR */
 ::-webkit-scrollbar-track {
   background: var(--C-SeaWeb_Purple);
 }
@@ -649,30 +501,21 @@ input[type="color"] {
 }
 * {
   /* For Firefox (Experimental) */
-  scrollbar-width: thin;
   scrollbar-color: var(--C-Uzakon_Light_Purple) var(--C-SeaWeb_Purple);
 }
 /* SCROLL BAR */ /* SCROLL BAR */ /* SCROLL BAR */ /* SCROLL BAR */
-
 /* NOT FOUND */ /* NOT FOUND */ /* NOT FOUND */ /* NOT FOUND */
 .not-found {
   background: linear-gradient(135deg, var(--notfound-bg1), var(--notfound-bg2));
-  font-family: "Comic Sans MS", "Josefin Sans", sans-serif;
   color: var(--notfound-text1);
 }
-.not-found h1 {
-  font-size: var(--Fs-NotFoundTitle);
-}
 .not-found p {
-  font-size: var(--Fs-NotFoundDesc);
   color: var(--notfound-text2);
 }
 .not-found a {
-  font-size: var(--Fs-NotFoundBtn);
   background: var(--notfound-btn);
   color: var(--notfound-textbtn);
   border-radius: 10px;
-  text-decoration: none;
   box-shadow: 0 0 10px color-mix(in srgb, var(--notfound-btn) 40%, transparent);
 }
 .not-found a:hover {
@@ -682,22 +525,15 @@ input[type="color"] {
 /* UNDER CONSTRUCTION */ /* UNDER CONSTRUCTION */ /* UNDER CONSTRUCTION */
 .underconstruction {
   background: linear-gradient(135deg, var(--notfound-bg1), var(--notfound-bg2));
-  font-family: "Comic Sans MS", "Josefin Sans", sans-serif;
   color: var(--notfound-text1);
 }
-.underconstruction h1 {
-  font-size: calc(var(--Fs-NotFoundTitle) - 42pt);
-}
 .underconstruction p {
-  font-size: var(--Fs-NotFoundDesc);
   color: var(--notfound-text2);
 }
 .underconstruction a {
-  font-size: var(--Fs-NotFoundBtn);
   background: var(--notfound-btn);
   color: var(--notfound-textbtn);
   border-radius: 10px;
-  text-decoration: none;
   box-shadow: 0 0 10px color-mix(in srgb, var(--notfound-btn) 40%, transparent);
 }
 .underconstruction a:hover {
@@ -710,52 +546,26 @@ input[type="color"] {
   color: var(--generalcontent-text);
 }
 .generalbigtitle {
-  font-family: "Baskervville", "Noto Serif JP", serif;
-  font-size: var(--Fs-BigTitle);
-  line-height: normal;
-  font-style: normal;
-  text-decoration: initial;
   color: var(--generaltitle-text);
 }
 .generaltitle {
-  font-size: var(--Fs-Title);
-  line-height: normal;
-  font-style: italic;
-  text-decoration: initial;
   color: var(--generaltitle-text);
 }
 .generalcontent a {
-  text-decoration: none;
   color: inherit;
 }
 .generalcontent li:hover {
   color: var(--generalcontent-texthover);
   text-shadow: 0 2px 5px
     color-mix(in srgb, var(--generalcontent-textshadow) 50%, transparent);
-  transform: scale(1.5);
-  font-style: italic;
-}
-.generalcontent li:active {
-  font-weight: bold;
 }
 .listseparator {
   color: var(--listseparator-text);
-  font-size: var(--Fs-Title);
-  font-style: normal;
-  font-weight: 600;
   background-color: var(--listseparator-bg);
   border-radius: 50px 4px;
 }
 .generaldesc-containerwrapper {
   background-color: var(--bg-color-3);
-}
-.generaldesc-container .label {
-  font-weight: bold;
-  text-align: right;
-}
-.generaldisclaimer {
-  font-size: var(--Fs-Content-small);
-  line-height: 1;
 }
 /* COMMON LAYOUT */ /* COMMON LAYOUT */ /* COMMON LAYOUT */
 /* TOGGLE */ /* TOGGLE */ /* TOGGLE */ /* TOGGLE */ /* TOGGLE */
@@ -764,9 +574,6 @@ input[type="color"] {
   --toggle-color-inactive: var(--button-background);
   --toggle-color-switch: var(--C-Vesnea_white);
   --toggle-color-disabled: #ddd;
-}
-.toggle-switch {
-  text-align: left;
 }
 .toggle-switch-label {
   border-radius: var(--toggle-border-radius);
@@ -781,7 +588,6 @@ input[type="color"] {
   background: var(--toggle-color-switch);
   border: 0 solid var(--toggle-color-inactive);
   border-radius: var(--toggle-border-radius);
-  transition: all 0.1s ease;
 }
 .toggle-switch-disabled {
   background-color: var(--toggle-color-disabled);
@@ -792,10 +598,6 @@ input[type="color"] {
 /* TOGGLE */ /* TOGGLE */ /* TOGGLE */ /* TOGGLE */ /* TOGGLE */
 /* ATTRIBUTES */ /* ATTRIBUTES */ /* ATTRIBUTES */ /* ATTRIBUTES */
 .attribute-badge {
-  font-family: var(--F-Montserrat);
-  font-size: var(--Fs-Content-small);
-  font-style: italic;
-  font-weight: bold;
   box-shadow: 0 2px 2px
     color-mix(in srgb, var(--charcard-border) 50%, transparent);
   border-radius: 6px;

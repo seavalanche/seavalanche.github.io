@@ -8,6 +8,7 @@ p {
 }
 html {
   scroll-padding-top: 150px;
+  scroll-behavior: smooth;
 }
 @media only screen and (max-width: 800px) {
   html {
@@ -21,8 +22,20 @@ html {
 .textpanel input {
   padding: 8px;
 }
-/* @import "react-alice-carousel/lib/alice-carousel.css"; */
-
+/* TEXTPANEL, BUTTON, INPUT */ /* TEXTPANEL, BUTTON, INPUT */
+button {
+  cursor: pointer;
+}
+/* TEXTPANEL, BUTTON, INPUT */ /* TEXTPANEL, BUTTON, INPUT */
+/* SCROLL BAR */ /* SCROLL BAR */ /* SCROLL BAR */ /* SCROLL BAR */
+::-webkit-scrollbar {
+  width: 12px;
+}
+* {
+  /* For Firefox (Experimental) */
+  scrollbar-width: thin;
+}
+/* SCROLL BAR */ /* SCROLL BAR */ /* SCROLL BAR */ /* SCROLL BAR */
 /* NOT FOUND */ /* NOT FOUND */ /* NOT FOUND */ /* NOT FOUND */
 .not-found {
   display: flex;
@@ -117,6 +130,9 @@ html {
   text-align: center;
   margin: 0 20px 0 20px;
 }
+.generalcontent li:hover {
+  transform: scale(1.5);
+}
 .listseparator {
   min-height: 2.5rem;
   align-content: center;
@@ -157,6 +173,7 @@ html {
   }
   .generaldesc-container .label {
     padding-right: 5px;
+    text-align: right;
   }
 }
 /* COMMON LAYOUT */ /* COMMON LAYOUT */ /* COMMON LAYOUT */
@@ -170,6 +187,7 @@ html {
   --toggle-switch-margin: calc(var(--toggle-height) * 5 / 34);
 }
 .toggle-switch {
+  text-align: left;
   user-select: none;
   position: relative;
   display: inline-block;
@@ -212,6 +230,7 @@ html {
   );
   width: var(--toggle-switch-size);
   margin: var(--toggle-switch-margin);
+  transition: all 0.1s ease;
 }
 .toggle-switch-disabled {
   cursor: not-allowed;
@@ -243,11 +262,11 @@ html {
   padding: var(--attribute-padding-top-bot) var(--attribute-padding-left-right);
 }
 @media only screen and (max-width: 800px) {
-* {
-  --attribute-padding-top-bot: 2px;
-  --attribute-padding-left-right: 10px;
-  --attribute-width: 50px;
-  --attribute-height: 20px;
-}
+  * {
+    --attribute-padding-top-bot: 2px;
+    --attribute-padding-left-right: 10px;
+    --attribute-width: 50px;
+    --attribute-height: 20px;
+  }
 }
 /* ATTRIBUTES */ /* ATTRIBUTES */ /* ATTRIBUTES */ /* ATTRIBUTES */

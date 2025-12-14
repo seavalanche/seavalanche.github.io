@@ -37,7 +37,7 @@ function NewsSection() {
 
     return (
         <div className="NS-container">
-            <div className="NS-container-title">News Feed</div>
+            <div className="LP-card-title">News Feed</div>
             <div className="NS-tagfilters">
                 {tags.map((tag, i) => (
                     <button
