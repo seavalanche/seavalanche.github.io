@@ -1,0 +1,69 @@
+.noscript-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  color: #f8bed5;
+  background-color: rgb(76, 44, 87, 0.3);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-align: center;
+  border-radius: 12px;
+  margin: 5rem auto;
+  width: 80%;
+  max-width: min(550px, 50vw);
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+}
+
+.noscript-pfp {
+  margin-top: 1rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff69b4;
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.noscript-pfp-link {
+  display: inline-block;
+  text-decoration: none;
+}
+.noscript-pfp-link:active .noscript-pfp {
+  transform: scale(0.95);
+  box-shadow: 0 0 4px rgba(255, 105, 180, 0.9);
+}
+.noscript-pfp-link:hover .noscript-pfp {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.7);
+}
+
+.noscript-message-pfp {
+  margin-top: 0.2rem;
+  color: #f29cc2;
+  font-size: 16pt;
+  font-family: "Josefin Sans";
+  font-style: italic;
+}
+
+.noscript-message-sub {
+  margin-top: 1rem;
+  color: #c6b0cf;
+  font-size: 10pt;
+  font-style: italic;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+html {
+  background-color: #ccc6e7;
+  background-image: url("noscript-bg.webp");
+  background-size: 20%;
+  background-blend-mode: multiply;
+}
