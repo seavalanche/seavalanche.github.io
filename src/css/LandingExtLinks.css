@@ -1,4 +1,8 @@
+.landing-extlinks {
+  margin-top: calc(var(--landing-padding4) * -1);
+}
 .toggle-btn {
+  font-size: 8pt;
   font-weight: 600;
   padding: var(--landing-padding3) var(--landing-padding2);
   background-color: transparent;
