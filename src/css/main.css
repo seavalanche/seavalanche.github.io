@@ -204,64 +204,28 @@
   aspect-ratio: 560 / 600;
   display: flex;
   flex-wrap: wrap;
+  opacity: 0;
+}
+.pfp-overlay:hover {
+  opacity: 1;
 }
 .pfp-overlay:has(.pfpzone.A0:hover) {
-  --landing-pfp: url(../Assets//Header/Header_pfp_1/1-A0.png);
+  --landing-pfp: url(../Assets//Header/Header_pfp/A0.png);
 }
 .pfp-overlay:has(.pfpzone.B0:hover) {
-  --landing-pfp: url(../Assets//Header/Header_pfp_1/1-B0.png);
+  --landing-pfp: url(../Assets//Header/Header_pfp/B0.png);
 }
 .pfp-overlay:has(.pfpzone.C0:hover) {
-  --landing-pfp: url(../Assets//Header/Header_pfp_1/1-C0.png);
+  --landing-pfp: url(../Assets//Header/Header_pfp/C0.png);
 }
 .pfp-overlay:has(.pfpzone.A1:hover) {
-  --landing-pfp: url(../Assets//Header/Header_pfp_1/1-A1.png);
+  --landing-pfp: url(../Assets//Header/Header_pfp/A1.png);
 }
 .pfp-overlay:has(.pfpzone.B1:hover) {
-  --landing-pfp: url(../Assets//Header/Header_pfp_1/1-B1.png);
+  --landing-pfp: url(../Assets//Header/Header_pfp/B1.png);
 }
 .pfp-overlay:has(.pfpzone.C1:hover) {
-  --landing-pfp: url(../Assets//Header/Header_pfp_1/1-C1.png);
-}
-[data-theme="dark"] {
-  .pfp-overlay:has(.pfpzone.A0:hover) {
-    --landing-pfp: url(../Assets//Header/Header_pfp_3/3-A0.png);
-  }
-  .pfp-overlay:has(.pfpzone.B0:hover) {
-    --landing-pfp: url(../Assets//Header/Header_pfp_3/3-B0.png);
-  }
-  .pfp-overlay:has(.pfpzone.C0:hover) {
-    --landing-pfp: url(../Assets//Header/Header_pfp_3/3-C0.png);
-  }
-  .pfp-overlay:has(.pfpzone.A1:hover) {
-    --landing-pfp: url(../Assets//Header/Header_pfp_3/3-A1.png);
-  }
-  .pfp-overlay:has(.pfpzone.B1:hover) {
-    --landing-pfp: url(../Assets//Header/Header_pfp_3/3-B1.png);
-  }
-  .pfp-overlay:has(.pfpzone.C1:hover) {
-    --landing-pfp: url(../Assets//Header/Header_pfp_3/3-C1.png);
-  }
-}
-[data-theme="star"] {
-  .pfp-overlay:has(.pfpzone.A0:hover) {
-    --landing-pfp: url(../Assets//Header/Header_pfp_4/4-A0.png);
-  }
-  .pfp-overlay:has(.pfpzone.B0:hover) {
-    --landing-pfp: url(../Assets//Header/Header_pfp_4/4-B0.png);
-  }
-  .pfp-overlay:has(.pfpzone.C0:hover) {
-    --landing-pfp: url(../Assets//Header/Header_pfp_4/4-C0.png);
-  }
-  .pfp-overlay:has(.pfpzone.A1:hover) {
-    --landing-pfp: url(../Assets//Header/Header_pfp_4/4-A1.png);
-  }
-  .pfp-overlay:has(.pfpzone.B1:hover) {
-    --landing-pfp: url(../Assets//Header/Header_pfp_4/4-B1.png);
-  }
-  .pfp-overlay:has(.pfpzone.C1:hover) {
-    --landing-pfp: url(../Assets//Header/Header_pfp_4/4-C1.png);
-  }
+  --landing-pfp: url(../Assets//Header/Header_pfp/C1.png);
 }
 .landing-pfp {
   background-image: var(--landing-pfp);
