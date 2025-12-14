@@ -10,7 +10,13 @@ export default function VesneaBio() {
                     <div key={i} className={`list-item ${list.topic}`}>
                         <span className={`bio-list-topic`}>{list.topic}</span>
                         <span>:</span>
-                        <span className={`bio-list-content`}>{list.content}</span>
+                        {list.url ? (
+                            <a href={list.url} target="_blank" rel="noopener noreferrer">
+                                {list.content}
+                            </a>
+                        ) : (
+                            <span className={`bio-list-content`}>{list.content}</span>
+                        )}
                     </div>
                 ))}
             </div>

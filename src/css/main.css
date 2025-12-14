@@ -518,3 +518,10 @@
 .bio-list-topic {
   font-weight: 600;
 }
+.list-item a {
+  text-decoration: none;
+  color: var(--deactivated-color);
+}
+.list-item a:hover {
+  color: var(--main-font-color);
+}
