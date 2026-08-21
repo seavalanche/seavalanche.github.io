@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -29,12 +29,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'npm'
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build project
+        env:
+          CI: false
         run: npm run build
 
       - name: Setup Pages
@@ -43,7 +45,7 @@ jobs:
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './build' # Default build output folder for Create React App
+          path: "./build" # Default build output folder for Create React App
 
       - name: Deploy to GitHub Pages
         id: deployment
