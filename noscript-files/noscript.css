@@ -1,3 +1,16 @@
+.noscript-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--landing-padding) 0;
+  gap: var(--landing-padding);
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(from var(--primary-bg, #fefcfc) h s l / 0.7);
+}
 .noscript-message {
   display: flex;
   flex-direction: column;
@@ -6,8 +19,8 @@
   padding: 2rem;
   font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
-  color: #f8bed5;
-  background-color: rgb(76, 44, 87, 0.3);
+  color: var(--primary-content, #4c2c57);
+  background-color: hsl(from var(--primary-bg, #fefcfc) h s l / 0.4);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -15,10 +28,13 @@
   -webkit-backdrop-filter: blur(8px);
   text-align: center;
   border-radius: 12px;
-  margin: 5rem auto;
   width: 80%;
   max-width: min(550px, 50vw);
-  box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+  box-shadow: 0 0 10px 1px hsl(from var(--shadow, #4c2c57) h s l / 0.4);
+}
+.noscript-message:hover {
+  background-color: hsl(from var(--primary-bg, #fefcfc) h s l / 0.9);
+  box-shadow: 0 0 10px 1px hsl(from var(--glow, #fdc4d3) h s l / 0.6);
 }
 
 .noscript-pfp {
@@ -27,9 +43,9 @@
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #ff69b4;
+  border: 3px solid var(--primary-content, #4c2c57);
   box-shadow: 0 0 8px rgba(255, 105, 180, 0.5);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: hsl(from var(--primary-content, #4c2c57) h s l / 0.8 );
 }
 
 .noscript-pfp-link {
@@ -38,11 +54,11 @@
 }
 .noscript-pfp-link:active .noscript-pfp {
   transform: scale(0.95);
-  box-shadow: 0 0 4px rgba(255, 105, 180, 0.9);
+  box-shadow: 0 0 10px 1px hsl(from var(--shadow, #4c2c57) h s l / 0.4);
 }
 .noscript-pfp-link:hover .noscript-pfp {
   transform: scale(1.05);
-  box-shadow: 0 0 12px rgba(255, 105, 180, 0.7);
+  box-shadow: 0 0 10px 4px hsl(from var(--glow, #fdc4d3) h s l / 0.6);
 }
 
 .noscript-message-pfp {
@@ -62,8 +78,28 @@
 }
 
 html {
-  background-color: #ccc6e7;
-  background-image: url("noscript-bg.webp");
+  background-color: var(--primary-bg, #fefcfc);
   background-size: 20%;
-  background-blend-mode: multiply;
+}
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: var(--primary-content, #4c2c57);
+  -webkit-mask-image: url("seaweb-bg-1.webp");
+  mask-image: url("seaweb-bg-1.webp");
+  -webkit-mask-size: 20%;
+  mask-size: 20%;
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
+  -webkit-mask-position: 0 var(--scroll-y, 0px);
+  mask-position: 0 var(--scroll-y, 0px);
 }
