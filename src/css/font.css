@@ -61,14 +61,6 @@ html {
   font-family: var(--F-TextPanel);
   font-size: var(--Fs-Content);
 }
-button {
-  font-family: "Montserrat", "Noto Sans JP", sans-serif;
-  font-size: var(--Fs-Content-small);
-}
-button:hover,
-button:active {
-  font-style: oblique;
-}
 
 .josefin-sans-AboutVesnea {
   font-family: "Josefin Sans", sans-serif;

@@ -1,0 +1,16 @@
+button {
+  background-color: var(--tertiary-bg);
+  color: var(--tertiary-content);
+  border: 1px solid var(--tertiary-content);
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-size: var(--Fs-Content-small);
+}
+button:hover,
+button:active {
+  background-color: var(--tertiary-bg-hover);
+  color: var(--tertiary-content-hover);
+  border: 1px solid var(--tertiary-content-hover);
+  box-shadow: 0 8px 12px color-mix(in srgb, var(--glow) 50%, transparent);
+}

@@ -1,0 +1,83 @@
+:root,
+[data-theme="light"],
+[data-theme="infinity"] {
+  --primary-bg: var(--c-vesnea-white);
+  --primary-content: var(--c-vesnea-purple);
+
+  --secondary-bg: var(--c-uzakon-lilac);
+  --secondary-content: var(--c-vesnea-white);
+
+  --tertiary-bg: var(--c-vesnea-light-pink);
+  --tertiary-content: var(--c-vesnea-purple);
+
+  --shadow: var(--primary-content);
+  --glow: var(--tertiary-bg);
+
+  --active-color: hsl(from var(--attribute-nature) h s calc(l - 15) / 1);
+  --deactivated-color: hsl(from var(--attribute-metal) h s l / 0.5);
+  --inactive-color: hsl(from var(--attribute-metal) h s l / 0.5);
+  --private-color: hsl(from var(--attribute-sound) h s calc(l - 15) / 1);
+}
+:root {
+  --primary-bg-hover: hsl(from var(--primary-content) h s l / 0.9);
+  --primary-content-hover: var(--primary-bg);
+  --primary-content-dimmed: hsl(from var(--primary-content) h s l / 0.5);
+
+  --secondary-bg-hover: hsl(from var(--secondary-content) h s l / 0.9);
+  --secondary-content-hover: var(--secondary-bg);
+  --secondary-content-dimmed: hsl(from var(--secondary-content) h s l / 0.5);
+
+  --tertiary-bg-hover: hsl(from var(--tertiary-content) h s l / 0.9);
+  --tertiary-content-hover: var(--tertiary-bg);
+  --tertiary-content-dimmed: hsl(from var(--tertiary-content) h s l / 0.5);
+
+  --active-color: hsl(from var(--attribute-nature) h s calc(l - 15) / 1);
+  --deactivated-color: var(--c-baldor-light-gray);
+  --inactive-color: var(--c-baldor-light-gray);
+  --private-color: var(--c-arna-ruby-red);
+
+  --protagonist-character-color: var(--c-korazu-ivory);
+  --deuteragonist-character-color: var(--c-seavalanche-pale-green);
+  --psychological-antagonist-character-color: var(--attribute-sound);
+  --the-feared-character-color:  var(--attribute-sound);
+  --multiverse-vesnea-character-color:  var(--c-korazu-ivory);
+}
+[data-theme="dark"] {
+  --primary-bg: var(--c-seaweb-purple);
+  --primary-content: var(--c-korazu-pale-gold);
+
+  --secondary-bg: hsl(from var(--c-seaweb-dark-purple) h s l / 0.5);
+  --secondary-content: var(--c-vesnea-white);
+
+  --tertiary-bg: var(--c-korazu-pale-gold);
+  --tertiary-content: var(--c-seaweb-purple);
+
+  --shadow: hsl(from var(--primary-bg) h s calc(l - 10));
+  --glow: var(--tertiary-bg);
+}
+[data-theme="star"] {
+  --primary-bg: var(--c-seaweb-dark-purple);
+  --primary-content: var(--c-uzakon-purple-gray);
+
+  --secondary-bg: hsl(from var(--c-seaweb-dark-purple) h s l / 0.5);
+  --secondary-content: var(--c-uzakon-purple-gray);
+
+  --tertiary-bg: var(--c-uzakon-lilac);
+  --tertiary-content: var(--c-seaweb-dark-purple);
+
+  --shadow: hsl(from var(--primary-bg) h s calc(l - 10));
+  --glow: var(--tertiary-bg);
+}
+[data-theme="infinity"] {
+  --primary-bg: var(--c-seavalanche-white);
+  --primary-content: hsl(from var(--c-seavalanche-pale-green) h s calc(l - 20));
+
+  --secondary-bg: var(--c-seavalanche-white);
+  --secondary-content: hsl(from var(--c-seavalanche-dark-yellow) h s calc(l - 10));
+
+  --tertiary-bg: var(--c-seavalanche-light-lime);
+  --tertiary-content: var(--primary-content);
+
+  --shadow: var(--primary-content);
+  --glow: var(--tertiary-bg);
+}

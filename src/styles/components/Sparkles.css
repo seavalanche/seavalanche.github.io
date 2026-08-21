@@ -1,0 +1,17 @@
+.sparkle-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.sparkle-canvas {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.sparkle-content {
+  position: relative;
+  z-index: 1;
+}

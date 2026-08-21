@@ -3,14 +3,37 @@ import './css/theme.css';
 import './css/layout.css';
 import './css/font.css';
 import './css/themebtn.css';
+import './styles/base/base.css';
+import './styles/base/variables.css';
+import './styles/base/palette.css';
+import './styles/base/resources.css';
+import './styles/base/scrollbar.css';
 import React, { useState } from "react";
 import NewsSection from './Components/NewsSection';
 import LandingExtLinks from './Components/LandingExtLinks';
 import VesneaBio from './Components/VesneaBio';
+import Sparkles from './Components/Sparkles';
+
+import { ReactComponent as PfpBg } from './Assets/Header/header-pfp-0.svg'
+import { ReactComponent as LogoHome } from './Assets/Header/header-home.svg'
+import { ReactComponent as LogoBluesky } from './Assets/Header/header-bsky.svg'
+import { ReactComponent as LogoKofi } from './Assets/Header/header-kofi.svg'
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const speed = 0.05;
 
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY * speed;
+    document.body.style.setProperty('--scroll-y', `${scrollY}px`);
+  }, { passive: true });
+
+  const [theme, setTheme] = useState("light");
+  const themes = [
+    { id: 'light', class: 'landingbtn1', label: 'Light Theme' },
+    { id: 'dark', class: 'landingbtn3', label: 'Dark Theme' },
+    { id: 'star', class: 'landingbtn2', label: 'Star Theme' },
+    { id: 'infinity', class: 'landingbtn4', label: 'Infinity Theme' },
+  ];
   const toggleTheme = (newTheme) => {
     setTheme(newTheme);
     document.documentElement.setAttribute("data-theme", newTheme);
@@ -18,29 +41,42 @@ function App() {
   };
 
   const charicons1 = [
-    "PFP_MythSeavalanche.png",
-    "PFP_Seavalanche.png",
-    "PFP_Seava.png",
-    "PFP_Vesnea.png",
-    "PFP_Korazu.png",
-    "PFP_Uzakon.png",
-    "PFP_Zumiko.png",
+    "pfp-mythseavalanche.webp",
+    "pfp-seavalanche.webp",
+    "pfp-seava.webp",
+    "pfp-seravyn.webp",
+    "pfp-vesnea.webp",
+    "pfp-korazu.webp",
+    "pfp-uzakon.webp",
+    "pfp-zumiko.webp",
   ];
   const charicons2 = [
-    "PFP_Tharos_glow.png",
-    "PFP_Noira_glow.png",
-    "PFP_Zeo_glow.png",
-    "PFP_placeholder.png",
+    "pfp-tharos-glow.webp",
+    "pfp-noira-glow.webp",
+    "pfp-zeo-glow.webp",
+    "pfp-placeholder.webp",
   ];
   const charicons3 = [
-    "PFP_Arna.png",
-    "PFP_Arnamini.png",
-    "PFP_Baldor.png",
-    "PFP_Rakariki.png",
-    "PFP_Veranite.png",
-    "PFP_Fondan.png",
-    "PFP_Sarchie.png",
-    "PFP_Deimev.png",
+    "pfp-arna.webp",
+    "pfp-arnamini.webp",
+    "pfp-baldor.webp",
+    "pfp-rakariki.webp",
+    "pfp-veranite.webp",
+    "pfp-fondan.webp",
+    "pfp-sarchie.webp",
+    "pfp-deimev.webp",
+  ];
+  const charicons4 = [
+    "pfp-placeholder.webp",
+    "pfp-placeholder.webp",
+    "pfp-placeholder.webp",
+    "pfp-placeholder.webp",
+  ];
+  const charicons5 = [
+    "pfp-vesneon.webp",
+    "pfp-vesrionne.webp",
+    "pfp-placeholder.webp",
+    "pfp-placeholder.webp",
   ];
 
   return (
@@ -56,44 +92,58 @@ function App() {
               <div className='pfpzone C1' />
               <div className='pfpzone B1' />
             </div>
-            <div className='landing-pfp' />
-            <div className='landing-name'>veslogo3</div>
+            <div className='landing-pfp-container'>
+              <div className='landing-pfp' />
+              <PfpBg className='landing-pfp-bg' />
+            </div>
+            <div className='landing-name'>
+              <Sparkles>
+                veslogo3
+              </Sparkles>
+            </div>
             <div className='landing-bio'>Call me Vesnea! - She/Her</div>
             <div className='landing-socials'>
               <a className='social-home' href='https://seavalanche.github.io/projectseaweb' target='_blank' rel="noreferrer">
-                <div className='social-home-icon'></div>
+                <div className='social-home-icon'><LogoHome /></div>
                 <div className='social-home-name'>Seavalanche's Website</div>
               </a>
-              <a className='social-links kofi' href='https://ko-fi.com/seavalanche' target='_blank' rel="noreferrer">
-                <div className='social-linkicon kofi'></div>
-                <div className='social-linkname'>Seavalanche's Ko-fi</div>
-              </a>
               <a className='social-links bsky' href='https://bsky.app/profile/seavalanche.bsky.social' target='_blank' rel="noreferrer">
-                <div className='social-linkicon bsky'></div>
+                <div className='social-linkicon bsky'><LogoBluesky /></div>
                 <div className='social-linkname'>Seavalanche's Bluesky</div>
+              </a>
+              <a className='social-links kofi' href='https://ko-fi.com/seavalanche' target='_blank' rel="noreferrer">
+                <div className='social-linkicon kofi'><LogoKofi /></div>
+                <div className='social-linkname'>Seavalanche's Ko-fi</div>
               </a>
             </div>
             <LandingExtLinks />
           </div>
           <div className='landing-theme-selection'>
-            <button className="landing-theme-button landingbtn1" onClick={() => toggleTheme("light")} aria-label="Switch Theme" />
-            <button className="landing-theme-button landingbtn3" onClick={() => toggleTheme("dark")} aria-label="Switch Theme" />
-            <button className="landing-theme-button landingbtn2" onClick={() => toggleTheme("star")} aria-label="Switch Theme" />
+            {themes.map((t) => (
+              <button
+                key={t.id}
+                className={`landing-theme-button ${theme === t.id ? 'active' : ''}`}
+                onClick={() => toggleTheme(t.id)}
+                aria-label={t.label}
+              >
+                <div className={`landing-theme-icon ${t.class}`} />
+              </button>
+            ))}
           </div>
         </div>
         <a className='landing-card charicons' href='https://seavalanche.github.io/projectseaweb/#/CharInfo' target='_blank' rel="noreferrer">
           <div className='LP-card-title'>Seavalanche Characters</div>
-          <div className='charicons-wrapper mainchar'>
+          <div className='charicons-wrapper seavalanchefragments'>
             {charicons1.map((icon, i) => {
               const name = icon
                 .replace(/\.[^/.]+$/, "")  // remove extension
-                .replace(/^PFP_/, "")      // remove "PFP_" prefix
-                .replace(/_/g, " ");       // underscores → spaces
+                .replace(/^pfp-/, "")
+                .replace(/-/g, " ");
               const altText = `This is ${name}`;
               return (
                 <img
                   key={i}
-                  src={`/Assets/charcardPFP/${icon}`}
+                  src={`/Assets/characters-pfp/${icon}`}
                   alt={altText}
                   title={altText}
                   className="charicon"
@@ -101,17 +151,17 @@ function App() {
               );
             })}
           </div>
-          <div className='charicons-wrapper deuterachar'>
+          <div className='charicons-wrapper teamemblem'>
             {charicons2.map((icon, i) => {
               const name = icon
                 .replace(/\.[^/.]+$/, "")  // remove extension
-                .replace(/^PFP_/, "")      // remove "PFP_" prefix
-                .replace(/_/g, " ");       // underscores → spaces
+                .replace(/^pfp-/, "")
+                .replace(/-/g, " ");
               const altText = `This is ${name}`;
               return (
                 <img
                   key={i}
-                  src={`/Assets/charcardPFP/${icon}`}
+                  src={`/Assets/characters-pfp/${icon}`}
                   alt={altText}
                   title={altText}
                   className="charicon"
@@ -119,17 +169,53 @@ function App() {
               );
             })}
           </div>
-          <div className='charicons-wrapper psyvillainchar'>
+          <div className='charicons-wrapper themisguided'>
             {charicons3.map((icon, i) => {
               const name = icon
                 .replace(/\.[^/.]+$/, "")  // remove extension
-                .replace(/^PFP_/, "")      // remove "PFP_" prefix
-                .replace(/_/g, " ");       // underscores → spaces
+                .replace(/^pfp-/, "")
+                .replace(/-/g, " ");
               const altText = `This is ${name}`;
               return (
                 <img
                   key={i}
-                  src={`/Assets/charcardPFP/${icon}`}
+                  src={`/Assets/characters-pfp/${icon}`}
+                  alt={altText}
+                  title={altText}
+                  className="charicon"
+                />
+              );
+            })}
+          </div>
+          <div className='charicons-wrapper thefeared'>
+            {charicons4.map((icon, i) => {
+              const name = icon
+                .replace(/\.[^/.]+$/, "")  // remove extension
+                .replace(/^pfp-/, "")
+                .replace(/-/g, " ");
+              const altText = `This is ${name}`;
+              return (
+                <img
+                  key={i}
+                  src={`/Assets/characters-pfp/${icon}`}
+                  alt={altText}
+                  title={altText}
+                  className="charicon"
+                />
+              );
+            })}
+          </div>
+          <div className='charicons-wrapper multiversevesnea'>
+            {charicons5.map((icon, i) => {
+              const name = icon
+                .replace(/\.[^/.]+$/, "")  // remove extension
+                .replace(/^pfp-/, "")
+                .replace(/-/g, " ");
+              const altText = `This is ${name}`;
+              return (
+                <img
+                  key={i}
+                  src={`/Assets/characters-pfp/${icon}`}
                   alt={altText}
                   title={altText}
                   className="charicon"

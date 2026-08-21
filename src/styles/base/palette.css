@@ -1,0 +1,120 @@
+:root {
+  --c-seaweb-dark-purple: #181621;
+  --c-seaweb-purple: #2c233d;
+  --c-seaweb-playful-pink: #ff69b4;
+  --c-seaweb-love-pink: #d63384;
+  --c-seaweb-dusty-pink: #ec6f97cc;
+  --c-seaweb-white: #ffffff;
+
+  --c-seavalanche-purple: var(--c-vesnea-purple);
+  --c-seavalanche-pink: var(--c-vesnea-pink);
+  --c-seavalanche-light-pink: var(--c-vesnea-light-pink);
+  --c-seavalanche-pink-cream: #f4cebd;
+  --c-seavalanche-dark-yellow: #d8b86d;
+  --c-seavalanche-golden: #f4df7e;
+  --c-seavalanche-yellow: #fbefa1;
+  --c-seavalanche-light-blue: #e6f3f8;
+  --c-seavalanche-pale-green: #9ebb98;
+  --c-seavalanche-lime: #c1cc83;
+  --c-seavalanche-light-lime: #e0e98b;
+  --c-seavalanche-white: var(--c-seaweb-white);
+
+  --c-vesnea-purple: #4c2c57;
+  --c-vesnea-pink: #f29cc2;
+  --c-vesnea-light-pink: #fdc4d3;
+  --c-vesnea-pink-white: #fef2f6;
+  --c-vesnea-white: #fefcfc;
+  --c-vesnea-icy-blue: var(--c-seava-icy-blue);
+  --c-vesnea-light-icy-blue: #bbe2f0;
+  --c-vesnea-cream: var(--c-seava-cream);
+  --c-vesnea-green: #97b699;
+  --c-vesnea-light-green: #e1fdc4;
+
+  --c-seava-dark-blue: #3e4f7b;
+  --c-seava-blue: #4c77ae;
+  --c-seava-icy-blue: #9bd0e2;
+  --c-seava-cream: #fef2d3;
+  --c-seava-white: #fcfbf6;
+  --c-seava-flash-yellow: #ffe941;
+  --c-seava-old-yellow: #bfb97e;
+  --c-seava-gray: #8f969e;
+  --c-seava-cyan: #9be2c9;
+  --c-seava-light-cyan: #d3f0ea;
+  --c-seava-cyan-white: #edf6fa;
+
+  --c-seravyn-arctic-white: #f8fdfb;
+  --c-seravyn-alpenglow-pink: #e6a8d7;
+  --c-seravyn-glacial-blue: #a3d1e0;
+  --c-seravyn-deep-cerulean: #004b7a;
+  --c-seravyn-starlight-gold: #e8d2a6;
+
+  --c-korazu-orange: #fcbb9f;
+  --c-korazu-pale-gold: #ebd7a5;
+  --c-korazu-ivory: #f5eed8;
+  --c-korazu-pale-ivory: #fbf9ed;
+  --c-korazu-white: var(--c-seaweb-white);
+
+  --c-uzakon-lavender: #948abf;
+  --c-uzakon-lilac: #c5b0cf;
+  --c-uzakon-purple-gray: #d8d4e5;
+  --c-uzakon-lavender-white: #eeecf7;
+  --c-uzakon-white: var(--c-seaweb-white);
+
+  --c-zumiko-pale-red: #e28194;
+  --c-zumiko-pink: #f8bed6;
+  --c-zumiko-pale-pink: #f3cbd4;
+  --c-zumiko-pink-white: #f9e9ec;
+  --c-zumiko-white: var(--c-seaweb-white);
+
+  --c-baldor-gray: #5A5B5B;
+  --c-baldor-light-gray: #767978;
+  --c-baldor-clay-brown:#C18C65;
+  --c-baldor-pale-brown:#D7C2B7;
+  --c-baldor-white: var(--c-seaweb-white);
+  
+  --c-arna-white: var(--c-seaweb-white);
+  --c-arna-ruby-red: #D62D64;
+  --c-arna-sweet-pink: #EC6F97;
+  
+  --c-rakariki-white: var(--c-seaweb-white);
+  --c-rakariki-flash-yellow: var(--c-seava-flash-yellow);
+  --c-rakariki-sky-blue: #87D1F3;
+
+  --c-fondan-warm-gray: #373330;
+  --c-fondan-warm-light-gray: #48433E;
+  --c-fondan-white: var(--c-seaweb-white);
+
+  --c-veranite-black: #1C1B1D;
+  --c-veranite-flash-yellow: var(--c-seava-flash-yellow);
+  --c-veranite-white: var(--c-seaweb-white);
+
+  --c-sarchie-teal:#4E7F91;
+  --c-sarchie-sky-blue: #87D1F3;
+  --c-sarchie-light-cyan: #CEF1E5;
+  --c-sarchie-cyan: #9BE2C9;
+  --c-sarchie-yellow: #F9E9AD;
+  --c-sarchie-white: var(--c-seaweb-white);
+
+  --c-deimev-void-purple: #382F3C;
+  --c-deimev-violet: #70488C;
+  --c-deimev-gray: #7C787E;
+  --c-deimev-white: var(--c-seaweb-white);
+
+  /* Attributes */
+  --attribute-aether: #f4df7e;
+  --attribute-void: #1c1b1d;
+  --attribute-light: #ffffff;
+  --attribute-darkness: #382f3c;
+  --attribute-fire: #e1294d;
+  --attribute-water: #3e4f7b;
+  --attribute-nature: #70bb74;
+  --attribute-metal: #5a6775;
+  --attribute-electric: #ffe941;
+  --attribute-wind: #9be2c9;
+  --attribute-magical: #fdc4d3;
+  --attribute-psionic: #ce36be;
+  --attribute-spirit: #70488c;
+  --attribute-sound: #ec6f97;
+  --attribute-text-black: var(--c-seaweb-dark-purple);
+  --attribute-text-white: var(--c-seaweb-white);
+}
