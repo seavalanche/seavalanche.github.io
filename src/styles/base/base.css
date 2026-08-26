@@ -6,15 +6,6 @@ p {
   text-indent: 50px;
   margin-bottom: 15px;
 }
-html {
-  scroll-padding-top: 150px;
-  scroll-behavior: smooth;
-}
-@media only screen and (max-width: 800px) {
-  html {
-    scroll-padding-top: 70px;
-  }
-}
 
 button {
   background-color: var(--tertiary-bg);
@@ -23,7 +14,6 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
-  /* font-size: var(--Fs-Content-small); */
 }
 button:hover,
 button:active {

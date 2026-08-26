@@ -1,14 +1,11 @@
-import './css/main.css';
-import './css/theme.css';
-import './css/layout.css';
-import './css/font.css';
-import './css/themebtn.css';
+import './styles/pages/App.css'
+import './styles/base/font.css';
 import './styles/base/base.css';
 import './styles/base/variables.css';
 import './styles/base/palette.css';
 import './styles/base/resources.css';
 import './styles/base/scrollbar.css';
-import React, { useState } from "react";
+import { useState } from "react";
 import NewsSection from './Components/NewsSection';
 import LandingExtLinks from './Components/LandingExtLinks';
 import VesneaBio from './Components/VesneaBio';

@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import socialLinks from '../data/socialLinks.json';
-import '../css/main.css'
 import '../styles/components/LandingExtLinks.css'
 
 export default function LandingExtLinks() {

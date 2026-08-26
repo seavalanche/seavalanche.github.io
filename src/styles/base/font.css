@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "SeavalancheFont";
+  src: url(../../Assets/Fonts/Seavalanche_Font.ttf);
+}
+html {
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  font-size: var(--fs-0);
+  line-height: 20pt;
+  text-decoration: initial;
+  font-weight: 300;
+}
+
 /* @link https://utopia.fyi/type/calculator?c=360,18,1.2,1920,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
@@ -89,114 +101,14 @@
   --sp-s-l: clamp(1.125rem, 0.5625rem + 2.5vw, 2.5rem);
 }
 
-.noscript-container {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: hsl(from var(--primary-bg, #fefcfc) h s l / 0.7);
-}
-.noscript-message {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--sp-m);
-  font-family: "Montserrat", sans-serif;
-  font-size: var(--fs-1);
-  color: var(--primary-content, #4c2c57);
-  background-color: hsl(from var(--primary-bg, #fefcfc) h s l / 0.4);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  text-align: center;
-  border-radius: 12px;
-  width: 80%;
-  max-width: min(450px, 50vw);
-  box-shadow: 0 0 10px 1px hsl(from var(--shadow, #4c2c57) h s l / 0.4);
-}
-.noscript-message:hover {
-  background-color: hsl(from var(--primary-bg, #fefcfc) h s l / 0.9);
-  box-shadow: 0 0 10px 1px hsl(from var(--glow, #fdc4d3) h s l / 0.6);
-}
-
-.noscript-pfp {
-  margin-top: var(--sp-xs);
-  width: clamp(6.25rem, 5.7386rem + 2.2727vw, 7.5rem);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--primary-content, #4c2c57);
-  box-shadow: 0 0 8px rgba(255, 105, 180, 0.5);
-  background-color: hsl(from var(--primary-content, #4c2c57) h s l / 0.8);
-}
-
-.noscript-pfp-link {
-  display: inline-block;
-  text-decoration: none;
-}
-.noscript-pfp-link:active .noscript-pfp {
-  transform: scale(0.95);
-  box-shadow: 0 0 10px 1px hsl(from var(--shadow, #4c2c57) h s l / 0.4);
-}
-.noscript-pfp-link:hover .noscript-pfp {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px 4px hsl(from var(--glow, #fdc4d3) h s l / 0.6);
-}
-
-.noscript-message-pfp {
-  margin-top: var(--sp-2xs);
-  color: var(--primary-content, #4c2c57);
-  text-shadow: 0 0 10px hsl(from var(--glow, #fdc4d3) h s l / 0.5);
-  font-size: var(--fs-1);
-  font-family: "Josefin Sans";
-  font-style: italic;
-  paint-order: stroke fill;
-}
-.noscript-message-pfp:hover {
-  color: var(--primary-content-hover, #fefcfc);
-  text-shadow: 0 0 10px var(--glow, #fdc4d3);
-  -webkit-text-stroke: 4px hsl(from var(--glow, #fdc4d3) h s l / 0.5);
-  paint-order: stroke fill;
-}
-
-.noscript-message-sub {
-  margin-top: var(--sp-xs);
-  color: #c6b0cf;
-  font-size: var(--fs--2);
-  font-style: italic;
-  font-family: "Noto Sans JP", sans-serif;
-}
-
-html {
-  background-color: var(--primary-bg, #fefcfc);
-  background-size: 20%;
-}
-body {
-  position: relative;
-  min-height: 100vh;
-  margin: 0;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background-color: var(--primary-content, #4c2c57);
-  -webkit-mask-image: url("seaweb-bg-1.webp");
-  mask-image: url("seaweb-bg-1.webp");
-  -webkit-mask-size: clamp(11.25rem, 8.1818rem + 13.6364vw, 18.75rem);
-  mask-size: clamp(11.25rem, 8.1818rem + 13.6364vw, 18.75rem);
-  -webkit-mask-repeat: repeat;
-  mask-repeat: repeat;
-  -webkit-mask-position: 0 var(--scroll-y, 0px);
-  mask-position: 0 var(--scroll-y, 0px);
+/* Special sizes (Viewport: 360px -> 1920px) */
+:root {
+  --fluid-20-30: clamp(1.25rem, 1.1058rem + 0.641vw, 1.875rem);
+  --fluid-25-30: clamp(1.5625rem, 1.4904rem + 0.3205vw, 1.875rem);
+  --fluid-30-40: clamp(1.875rem, 1.7308rem + 0.641vw, 2.5rem);
+  --fluid-35-40: clamp(2.1875rem, 2.1154rem + 0.3205vw, 2.5rem);
+  --fluid-35-50: clamp(2.1875rem, 1.9712rem + 0.9615vw, 3.125rem);
+  --fluid-100-150: clamp(6.25rem, 5.5288rem + 3.2051vw, 9.375rem);
+  --fluid-175-225: clamp(10.9375rem, 10.2163rem + 3.2051vw, 14.0625rem);
+  --fluid-280-400: clamp(17.5rem, 15.7692rem + 7.6923vw, 25rem);
 }

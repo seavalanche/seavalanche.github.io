@@ -1,5 +1,4 @@
 import List from '../data/VesneaBio.json';
-import '../css/main.css'
 
 export default function VesneaBio() {
     return (

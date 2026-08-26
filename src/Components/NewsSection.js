@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import '../css/main.css'
 
 function NewsSection() {
     const [news, setNews] = useState([]);
@@ -37,7 +36,7 @@ function NewsSection() {
 
     return (
         <div className="NS-container">
-            <div className="LP-card-title">News Feed</div>
+            <div className="LP-card-title">Vesnea's News Feed</div>
             <div className="NS-tagfilters">
                 {tags.map((tag, i) => (
                     <button

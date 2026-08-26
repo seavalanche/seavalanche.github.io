@@ -5,12 +5,25 @@
   --landing-padding4: calc(var(--landing-padding3) / 2);
 
   --landing-pfp-size: var(--fluid-100-150);
+  --landing-pfp-aspect-ratio: calc(560 / 600);
+  --pfpzone-width-1: calc(60 / 150 * 100%);
+  --pfpzone-width-2: calc(30 / 150 * 100%);
+  --pfpzone-height-1: calc(97 / 150 * 100% * var(--landing-pfp-aspect-ratio));
+  --pfpzone-height-2: calc(
+    (var(--landing-pfp-size) / var(--landing-pfp-aspect-ratio)) -
+      var(--pfpzone-height-1)
+  );
   --card-width: clamp(var(--fluid-280-400), 450px, 90%);
   --social-link-icon-size: var(--fluid-35-50);
   --social-link-width: var(--fluid-175-225);
   --char-icon-size: var(--fluid-35-40);
   --news-card-height: clamp(var(--fluid-280-400), 800px, 90vh);
 }
+/* 
+|| -----------------------------------------
+|| LANDING CONTAINER
+|| -----------------------------------------
+*/
 @keyframes bgpulse {
   0% {
     background-color: hsl(from var(--primary-bg) h s l / 0.3);
@@ -24,9 +37,7 @@
 }
 .landing-container {
   display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  flex-direction: row;
+  flex-flow: row wrap;
   align-items: flex-start;
   justify-content: center;
   padding-top: var(--landing-padding);
@@ -43,6 +54,11 @@
   gap: var(--landing-padding);
   width: var(--card-width);
 }
+/* 
+|| -----------------------------------------
+|| LANDING CARD
+|| -----------------------------------------
+*/
 .landing-card {
   display: flex;
   flex-direction: column;
@@ -56,13 +72,10 @@
   color: var(--primary-content);
   border-radius: 8px;
   box-shadow: 0 0 10px 1px hsl(from var(--shadow) h s l / 0.4);
-  transition: all 0s ease-out;
-  transition-delay: 0s;
   width: var(--card-width);
 }
 .landing-card:hover {
   background-color: hsl(from var(--primary-bg) h s l / 0.9);
-  color: var(--primary-content);
   box-shadow: 0 0 10px 1px hsl(from var(--glow) h s l / 0.6);
 }
 .landing-card.header {
@@ -86,6 +99,11 @@
   padding-bottom: var(--landing-padding3);
   text-align: center;
 }
+/* 
+|| -----------------------------------------
+|| LANDING CARD -> LANDING PROFILE
+|| -----------------------------------------
+*/
 .landing-profile {
   background-color: hsl(from var(--tertiary-bg) h s l / 0.4);
   color: var(--tertiary-content);
@@ -104,25 +122,21 @@
 }
 .pfpzone.A0,
 .pfpzone.B0 {
-  width: calc(60 / 150 * 100%);
-  height: calc(97 / 150 * 100% * 560 / 600);
+  width: var(--pfpzone-width-1);
+  height: var(--pfpzone-height-1);
 }
 .pfpzone.C0 {
-  width: calc(30 / 150 * 100%);
-  height: calc(97 / 150 * 100% * 560 / 600);
+  width: var(--pfpzone-width-2);
+  height: var(--pfpzone-height-1);
 }
 .pfpzone.A1,
 .pfpzone.B1 {
-  width: calc(60 / 150 * 100%);
-  height: calc(
-    (var(--landing-pfp-size) * 600 / 560) - calc(97 / 150 * 100% * 560 / 600)
-  );
+  width: var(--pfpzone-width-1);
+  height: var(--pfpzone-height-2);
 }
 .pfpzone.C1 {
-  width: calc(30 / 150 * 100%);
-  height: calc(
-    (var(--landing-pfp-size) * 600 / 560) - calc(97 / 150 * 100% * 560 / 600)
-  );
+  width: var(--pfpzone-width-2);
+  height: var(--pfpzone-height-2);
 }
 .pfp-overlay {
   position: absolute;
@@ -130,7 +144,7 @@
   background-image: var(--landing-pfp-overlay);
   background-size: cover;
   width: var(--landing-pfp-size);
-  aspect-ratio: 560 / 600;
+  aspect-ratio: var(--landing-pfp-aspect-ratio);
   display: flex;
   flex-wrap: wrap;
   opacity: 0;
@@ -172,21 +186,6 @@
   color: var(--primary-content-hover);
   text-shadow: 0 0 10px var(--glow);
   -webkit-text-stroke: 4px hsl(from var(--glow) h s l / 0.5);
-  paint-order: stroke fill;
-}
-.landing-bio {
-  font-family: "SeavalancheFont";
-  font-size: var(--sffs-0);
-  text-shadow: 0 0 10px hsl(from var(--glow) h s l / 0.2);
-  margin-top: calc(var(--landing-padding) / -1);
-  line-height: 0.9;
-  margin-bottom: var(--landing-padding4);
-}
-.landing-bio:hover {
-  color: var(--primary-content);
-  -webkit-text-stroke: 4px hsl(from var(--primary-bg) h s l / 0.2);
-  text-shadow: 0 0 10px hsl(from var(--primary-bg) h s l / 0.2);
-  transform: scale(1.1);
 }
 .landing-socials {
   display: flex;
@@ -208,12 +207,12 @@
   justify-content: left;
   overflow: hidden;
   border-radius: 8px;
-  transition: width 0.3s ease;
   position: relative;
   width: var(--social-link-icon-size);
   --svg-0: var(--primary-bg);
   --svg-1: var(--primary-content);
   --svg-2: var(--primary-bg);
+  transition: all 0.3s ease;
 }
 .social-home {
   background-color: var(--tertiary-content);
@@ -254,7 +253,7 @@
   opacity: 0;
   margin-left: calc(var(--landing-padding4) * 1.5);
   margin-right: var(--landing-padding4);
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
   white-space: nowrap;
 }
 .social-home-name {
@@ -267,12 +266,9 @@
 .social-links:hover {
   width: var(--social-link-width);
   background-color: var(--tertiary-bg);
-  transition: all 0.3s ease;
 }
 .social-links:hover .social-linkname {
   opacity: 1;
-  transition: all 0.6s ease;
-  transform: translateX(0);
 }
 .landing-socials:hover .social-home {
   width: var(--social-link-icon-size);
@@ -280,8 +276,6 @@
 }
 .landing-socials:hover .social-home-name {
   opacity: 0;
-  transition: all 0.3s ease;
-  transform: translateX(0);
 }
 .landing-socials:hover .social-home:hover {
   width: var(--social-link-width);
@@ -293,8 +287,73 @@
 .landing-socials:hover .social-home:hover .social-home-name {
   opacity: 1;
   transition: all 1s ease;
-  transform: translateX(0);
 }
+/* 
+|| -----------------------------------------
+|| LANDING PROFILE -> THEME BUTTONS
+|| -----------------------------------------
+*/
+:root {
+  --icon-size: var(--fluid-25-30);
+}
+.landing-theme-selection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: var(--icon-size);
+  gap: var(--landing-padding2);
+}
+.landing-theme-button {
+  background-color: inherit;
+  height: 100%;
+  aspect-ratio: 1;
+  cursor: pointer;
+  border: 1px solid transparent;
+  opacity: 0.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--landing-padding2);
+}
+.landing-theme-button:hover:not(.landing-theme-button.active) {
+  padding: var(--landing-padding4);
+  opacity: 0.6;
+  transform: scale(1.2);
+}
+.landing-theme-icon {
+  background-color: initial;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90%;
+  aspect-ratio: 1;
+  border: none;
+}
+.landing-theme-button.active {
+  aspect-ratio: initial;
+  margin: 0 var(--landing-padding);
+  padding: var(--landing-padding4) var(--landing-padding2);
+  opacity: 1;
+  transform: scale(1.2);
+  border: 1px solid var(--tertiary-content-hover);
+  background-color: var(--tertiary-bg-hover);
+  color: var(--tertiary-content-hover);
+  box-shadow: 0 8px 12px color-mix(in srgb, var(--glow) 50%, transparent);
+  cursor: auto;
+}
+.landing-theme-button.active[aria-label]::after {
+  content: attr(aria-label);
+  font-size: var(--fs--2);
+}
+.landing-theme-button.active:hover {
+  box-shadow: inherit;
+}
+/* 
+|| -----------------------------------------
+|| LANDING CARD -> CHARACTER ICONS
+|| -----------------------------------------
+*/
 .landing-card.charicons {
   gap: var(--landing-padding3);
   text-decoration: none;
@@ -330,6 +389,64 @@
     from var(--multiverse-vesnea-character-color) h s l / 0.2
   );
 }
+/* 
+|| -----------------------------------------
+|| LANDING CARD -> LANDING BIO
+|| -----------------------------------------
+*/
+.landing-bio {
+  font-family: "SeavalancheFont";
+  font-size: var(--sffs-0);
+  text-shadow: 0 0 10px hsl(from var(--glow) h s l / 0.2);
+  margin-top: calc(var(--landing-padding) / -1);
+  line-height: 0.9;
+  margin-bottom: var(--landing-padding4);
+}
+.landing-bio:hover {
+  color: var(--primary-content);
+  -webkit-text-stroke: 4px hsl(from var(--primary-bg) h s l / 0.2);
+  text-shadow: 0 0 10px hsl(from var(--primary-bg) h s l / 0.2);
+  transform: scale(1.1);
+}
+.bio-list {
+  display: grid;
+  gap: var(--landing-padding3);
+  margin: var(--landing-padding3);
+  margin-bottom: 0;
+  animation: fadeIn 0.6s ease;
+}
+.list-item {
+  font-size: var(--fs-0);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: var(--landing-padding3) var(--landing-padding2);
+  border-radius: 4px;
+  border-left: 4px solid var(--secondary-bg);
+  background-color: hsl(from var(--secondary-bg) h s l / 0.5);
+  gap: var(--landing-padding2);
+  text-align: left;
+}
+.list-item:hover {
+  background-color: var(--primary-bg-hover);
+  color: var(--primary-content-hover);
+  border-left: 4px solid var(--primary-bg-hover);
+}
+.bio-list-topic {
+  font-weight: 600;
+}
+.list-item a {
+  text-decoration: none;
+  color: var(--deactivated-color);
+}
+.list-item a:hover {
+  color: var(--primary-content-hover);
+}
+/* 
+|| -----------------------------------------
+|| LANDING CARD -> NEWS SECTION
+|| -----------------------------------------
+*/
 .NS-container {
   display: flex;
   flex-direction: column;
@@ -349,7 +466,7 @@
   gap: var(--landing-padding4);
 }
 .NS-tagfilters-btn {
-  padding:  var(--landing-padding2);
+  padding: var(--landing-padding2);
   border-radius: 8px;
   font-size: var(--fs--1);
   font-family: "Josefin Sans";
@@ -424,47 +541,4 @@
   border: 1px solid var(--tertiary-content);
   border-radius: 8px;
   font-size: var(--fs--2);
-}
-@media only screen and (max-width: 350px) {
-  .NS-header {
-    flex-wrap: wrap;
-  }
-}
-
-.landing-card.bio {
-  width: var(--card-width);
-}
-.bio-list {
-  display: grid;
-  gap: var(--landing-padding3);
-  margin: var(--landing-padding3);
-  margin-bottom: 0;
-  animation: fadeIn 0.6s ease;
-}
-.list-item {
-  font-size: var(--fs-0);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: var(--landing-padding3) var(--landing-padding2);
-  border-radius: 4px;
-  border-left: 4px solid var(--secondary-bg);
-  background-color: hsl(from var(--secondary-bg) h s l / 0.5);
-  gap: var(--landing-padding2);
-  text-align: left;
-}
-.list-item:hover {
-  background-color: var(--primary-bg-hover);
-  color: var(--primary-content-hover);
-  border-left: 4px solid var(--primary-bg-hover);
-}
-.bio-list-topic {
-  font-weight: 600;
-}
-.list-item a {
-  text-decoration: none;
-  color: var(--deactivated-color);
-}
-.list-item a:hover {
-  color: var(--primary-content-hover);
 }
