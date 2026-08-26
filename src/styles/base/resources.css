@@ -20,14 +20,17 @@
   --landing-pfp-overlay: url(../../Assets//Header/header-pfp-1.webp);
 }
 .landingbtn1 {
-  background-image: url("../../Assets/Navbar/korazusun.svg");
+  background-image: url("../../Assets/characters-logo/symbol-korazu-sun.svg");
 }
 .landingbtn2 {
-  background-image: url("../../Assets/Navbar/zumikostar.svg");
+  background-image: url("../../Assets/characters-logo/symbol-zumiko-star.svg");
 }
 .landingbtn3 {
-  background-image: url("../../Assets/Navbar/uzakonmoon.svg");
+  background-image: url("../../Assets/characters-logo/symbol-uzakon-moon.svg");
 }
 .landingbtn4 {
-  background-image: url("../../Assets/Navbar/seavalancheinfinity.svg");
+  background-image: url("../../Assets/characters-logo/symbol-seavalanche-infinity.svg");
+}
+.landingbtn5 {
+  background-image: url("../../Assets/characters-logo/symbol-tharos-beacon.svg");
 }

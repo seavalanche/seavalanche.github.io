@@ -30,6 +30,7 @@ function App() {
     { id: 'dark', class: 'landingbtn3', label: 'Dark Theme' },
     { id: 'star', class: 'landingbtn2', label: 'Star Theme' },
     { id: 'infinity', class: 'landingbtn4', label: 'Infinity Theme' },
+    { id: 'beacon', class: 'landingbtn5', label: 'Beacon Theme' },
   ];
   const toggleTheme = (newTheme) => {
     setTheme(newTheme);

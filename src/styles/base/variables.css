@@ -39,8 +39,8 @@
   --protagonist-character-color: var(--c-korazu-ivory);
   --deuteragonist-character-color: var(--c-seavalanche-pale-green);
   --psychological-antagonist-character-color: var(--attribute-sound);
-  --the-feared-character-color:  var(--attribute-sound);
-  --multiverse-vesnea-character-color:  var(--c-korazu-ivory);
+  --the-feared-character-color: var(--attribute-sound);
+  --multiverse-vesnea-character-color: var(--c-korazu-ivory);
 }
 [data-theme="dark"] {
   --primary-bg: var(--c-seaweb-purple);
@@ -73,11 +73,47 @@
   --primary-content: hsl(from var(--c-seavalanche-pale-green) h s calc(l - 20));
 
   --secondary-bg: var(--c-seavalanche-white);
-  --secondary-content: hsl(from var(--c-seavalanche-dark-yellow) h s calc(l - 10));
+  --secondary-content: hsl(
+    from var(--c-seavalanche-dark-yellow) h s calc(l - 10)
+  );
 
   --tertiary-bg: var(--c-seavalanche-light-lime);
   --tertiary-content: var(--primary-content);
 
   --shadow: var(--primary-content);
   --glow: var(--tertiary-bg);
+}
+@property --beaconpulse {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #000000;
+}
+@keyframes beacon-pulse {
+  0%, 100% {
+    --beaconpulse: var(--c-team-emblem-pink);
+    --beaconpulse: #EE479F;
+  }
+  33% {
+    --beaconpulse: var(--c-team-emblem-yellow);
+    --beaconpulse: #EEEB47;
+  }
+  66% {
+    --beaconpulse: var(--c-team-emblem-green);
+    --beaconpulse: #95EE47;
+  }
+}
+[data-theme="beacon"] {
+  --primary-bg: var(--c-team-emblem-black);
+  --primary-content: var(--c-team-emblem-white);
+
+  --secondary-bg: var(--c-team-emblem-gray);
+  --secondary-content: var(--c-team-emblem-lime);
+
+  --tertiary-bg: var(--beaconpulse, #EE479F);
+  --tertiary-content: var(--c-team-emblem-black);
+
+  --shadow: hsl(from var(--primary-bg) h s calc(l - 10));
+  --glow: var(--tertiary-bg);
+
+  animation: beacon-pulse 20s infinite ease-in-out;
 }

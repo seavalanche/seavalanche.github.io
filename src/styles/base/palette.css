@@ -100,6 +100,16 @@
   --c-deimev-gray: #7C787E;
   --c-deimev-white: var(--c-seaweb-white);
 
+  --c-team-emblem-black: #25252B;
+  --c-team-emblem-gray: #7C7B8D;
+  --c-team-emblem-white: var(--c-seaweb-white);
+  --c-team-emblem-pink: #EE479F;
+  --c-team-emblem-yellow: #EEEB47;
+  --c-team-emblem-green:#95EE47;
+  --c-team-emblem-lime:#C5EE47;
+  --c-team-emblem-orange:#EE9947;
+  --c-team-emblem-gold:#EEBE47;
+
   /* Attributes */
   --attribute-aether: #f4df7e;
   --attribute-void: #1c1b1d;
