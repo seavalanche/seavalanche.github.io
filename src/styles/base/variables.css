@@ -1,6 +1,5 @@
 :root,
-[data-theme="light"],
-[data-theme="infinity"] {
+[data-theme="light"] {
   --primary-bg: var(--c-vesnea-white);
   --primary-content: var(--c-vesnea-purple);
 
@@ -31,16 +30,19 @@
   --tertiary-content-hover: var(--tertiary-bg);
   --tertiary-content-dimmed: hsl(from var(--tertiary-content) h s l / 0.5);
 
-  --active-color: hsl(from var(--attribute-nature) h s calc(l - 15) / 1);
-  --deactivated-color: var(--c-baldor-light-gray);
-  --inactive-color: var(--c-baldor-light-gray);
-  --private-color: var(--c-arna-ruby-red);
-
   --protagonist-character-color: var(--c-korazu-ivory);
   --deuteragonist-character-color: var(--c-seavalanche-pale-green);
   --psychological-antagonist-character-color: var(--attribute-sound);
   --the-feared-character-color: var(--attribute-sound);
   --multiverse-vesnea-character-color: var(--c-korazu-ivory);
+}
+[data-theme="dark"],
+[data-theme="star"],
+[data-theme="beacon"] {
+  --active-color: hsl(from var(--attribute-nature) h s calc(l - 15) / 1);
+  --deactivated-color: var(--c-baldor-light-gray);
+  --inactive-color: var(--c-baldor-light-gray);
+  --private-color: var(--c-arna-ruby-red);
 }
 [data-theme="dark"] {
   --primary-bg: var(--c-seaweb-purple);
