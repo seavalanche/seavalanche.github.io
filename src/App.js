@@ -26,11 +26,13 @@ function App() {
 
   const [theme, setTheme] = useState("light");
   const themes = [
-    { id: 'light', class: 'landingbtn1', label: 'Light Theme' },
-    { id: 'dark', class: 'landingbtn3', label: 'Dark Theme' },
-    { id: 'star', class: 'landingbtn2', label: 'Star Theme' },
-    { id: 'infinity', class: 'landingbtn4', label: 'Infinity Theme' },
-    { id: 'beacon', class: 'landingbtn5', label: 'Beacon Theme' },
+    { id: 'light', class: 'landingbtn1', label: 'Light' },
+    { id: 'dark', class: 'landingbtn3', label: 'Dark' },
+    { id: 'star', class: 'landingbtn2', label: 'Star' },
+    { id: 'infinity', class: 'landingbtn4', label: 'Infinity' },
+    { id: 'beacon', class: 'landingbtn5', label: 'Beacon' },
+    { id: 'icy', class: 'landingbtn6', label: 'Icy' },
+    { id: 'heart', class: 'landingbtn7', label: 'Heart' },
   ];
   const toggleTheme = (newTheme) => {
     setTheme(newTheme);

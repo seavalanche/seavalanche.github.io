@@ -89,17 +89,18 @@
   initial-value: #000000;
 }
 @keyframes beacon-pulse {
-  0%, 100% {
+  0%,
+  100% {
     --beaconpulse: var(--c-team-emblem-pink);
-    --beaconpulse: #EE479F;
+    --beaconpulse: #ee479f;
   }
   33% {
     --beaconpulse: var(--c-team-emblem-yellow);
-    --beaconpulse: #EEEB47;
+    --beaconpulse: #eeeb47;
   }
   66% {
     --beaconpulse: var(--c-team-emblem-green);
-    --beaconpulse: #95EE47;
+    --beaconpulse: #95ee47;
   }
 }
 [data-theme="beacon"] {
@@ -109,11 +110,37 @@
   --secondary-bg: var(--c-team-emblem-gray);
   --secondary-content: var(--c-team-emblem-lime);
 
-  --tertiary-bg: var(--beaconpulse, #EE479F);
+  --tertiary-bg: var(--beaconpulse, #ee479f);
   --tertiary-content: var(--c-team-emblem-black);
 
   --shadow: hsl(from var(--primary-bg) h s calc(l - 10));
   --glow: var(--tertiary-bg);
 
   animation: beacon-pulse 20s infinite ease-in-out;
+}
+[data-theme="icy"] {
+  --primary-bg: var(--c-seava-white);
+  --primary-content: var(--c-seava-dark-blue);
+
+  --secondary-bg: var(--c-seravyn-arctic-white);
+  --secondary-content: var(--c-seravyn-deep-cerulean);
+
+  --tertiary-bg: var(--c-seravyn-glacial-blue);
+  --tertiary-content: var(--c-seravyn-deep-cerulean);
+
+  --shadow: hsl(from var(--primary-bg) h s calc(l - 10));
+  --glow: var(--tertiary-bg);
+}
+[data-theme="heart"] {
+  --primary-bg: var(--c-vesnea-white);
+  --primary-content: hsl(from var(--c-zumiko-pale-red) h s calc(l - 10));
+
+  --secondary-bg: var(--c-vesnea-white);
+  --secondary-content: var(--c-vesnea-pink);
+
+  --tertiary-bg: var(--c-vesnea-light-pink);
+  --tertiary-content: var(--primary-content);
+
+  --shadow: hsl(from var(--primary-bg) h s calc(l - 10));
+  --glow: var(--tertiary-bg);
 }
