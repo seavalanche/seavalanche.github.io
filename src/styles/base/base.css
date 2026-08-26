@@ -23,7 +23,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
-  font-size: var(--Fs-Content-small);
+  /* font-size: var(--Fs-Content-small); */
 }
 button:hover,
 button:active {

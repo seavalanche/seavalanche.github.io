@@ -1,22 +1,47 @@
-/* @link https://utopia.fyi/type/calculator?c=360,18,1.25,1240,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/* @link https://utopia.fyi/type/calculator?c=360,18,1.2,1920,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
-  /* Step -2: 11.52px → 11.2556px */
-  --fs--2: clamp(0.7035rem, 0.7268rem + -0.03vw, 0.72rem);
-  /* Step -1: 14.4px → 15.0038px */
-  --fs--1: clamp(0.9rem, 0.8846rem + 0.0686vw, 0.9377rem);
+  /* Step -2: 12.5px → 12.8px */
+  --sffs--2: clamp(0.7813rem, 0.7769rem + 0.0192vw, 0.8rem);
+  /* Step -1: 15px → 16px */
+  --sffs--1: clamp(0.9375rem, 0.9231rem + 0.0641vw, 1rem);
   /* Step 0: 18px → 20px */
-  --fs-0: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
-  /* Step 1: 22.5px → 26.66px */
-  --fs-1: clamp(1.4063rem, 1.2999rem + 0.4727vw, 1.6663rem);
-  /* Step 2: 28.125px → 35.5378px */
-  --fs-2: clamp(1.7578rem, 1.5683rem + 0.8424vw, 2.2211rem);
-  /* Step 3: 35.1563px → 47.3719px */
-  --fs-3: clamp(2.1973rem, 1.8849rem + 1.3881vw, 2.9607rem);
-  /* Step 4: 43.9453px → 63.1467px */
-  --fs-4: clamp(2.7466rem, 2.2556rem + 2.182vw, 3.9467rem);
-  /* Step 5: 54.9316px → 84.1745px */
-  --fs-5: clamp(3.4332rem, 2.6855rem + 3.3231vw, 5.2609rem);
+  --sffs-0: clamp(1.125rem, 1.0962rem + 0.1282vw, 1.25rem);
+  /* Step 1: 21.6px → 25px */
+  --sffs-1: clamp(1.35rem, 1.301rem + 0.2179vw, 1.5625rem);
+  /* Step 2: 25.92px → 31.25px */
+  --sffs-2: clamp(1.62rem, 1.5431rem + 0.3417vw, 1.9531rem);
+  /* Step 3: 31.104px → 39.0625px */
+  --sffs-3: clamp(1.944rem, 1.8292rem + 0.5102vw, 2.4414rem);
+  /* Step 4: 37.3248px → 48.8281px */
+  --sffs-4: clamp(2.3328rem, 2.1669rem + 0.7374vw, 3.0518rem);
+  /* Step 5: 44.7898px → 61.0352px */
+  --sffs-5: clamp(2.7994rem, 2.5651rem + 1.0414vw, 3.8147rem);
+}
+
+/* @link https://utopia.fyi/type/calculator?c=360,14,1.25,1920,18,1.25,5,4,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  /* Step -4: 5.7344px → 7.3728px */
+  --fs--4: clamp(0.3584rem, 0.3348rem + 0.105vw, 0.4608rem);
+  /* Step -3: 7.168px → 9.216px */
+  --fs--3: clamp(0.448rem, 0.4185rem + 0.1313vw, 0.576rem);
+  /* Step -2: 8.96px → 11.52px */
+  --fs--2: clamp(0.56rem, 0.5231rem + 0.1641vw, 0.72rem);
+  /* Step -1: 11.2px → 14.4px */
+  --fs--1: clamp(0.7rem, 0.6538rem + 0.2051vw, 0.9rem);
+  /* Step 0: 14px → 18px */
+  --fs-0: clamp(0.875rem, 0.8173rem + 0.2564vw, 1.125rem);
+  /* Step 1: 17.5px → 22.5px */
+  --fs-1: clamp(1.0938rem, 1.0216rem + 0.3205vw, 1.4063rem);
+  /* Step 2: 21.875px → 28.125px */
+  --fs-2: clamp(1.3672rem, 1.277rem + 0.4006vw, 1.7578rem);
+  /* Step 3: 27.3438px → 35.1563px */
+  --fs-3: clamp(1.709rem, 1.5963rem + 0.5008vw, 2.1973rem);
+  /* Step 4: 34.1797px → 43.9453px */
+  --fs-4: clamp(2.1362rem, 1.9954rem + 0.626vw, 2.7466rem);
+  /* Step 5: 42.7246px → 54.9316px */
+  --fs-5: clamp(2.6703rem, 2.4942rem + 0.7825vw, 3.4332rem);
 }
 
 /* @link https://utopia.fyi/space/calculator?c=360,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
@@ -84,7 +109,7 @@
   justify-content: center;
   padding: var(--sp-m);
   font-family: "Montserrat", sans-serif;
-  font-size: var(--fs-0);
+  font-size: var(--fs-1);
   color: var(--primary-content, #4c2c57);
   background-color: hsl(from var(--primary-bg, #fefcfc) h s l / 0.4);
   background-size: cover;

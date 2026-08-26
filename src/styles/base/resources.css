@@ -1,23 +1,23 @@
 .pfp-overlay:has(.pfpzone.A0:hover) {
-  --landing-pfp: url(../../Assets//Header/header-pfp/a0.webp);
+  --landing-pfp-overlay: url(../../Assets//Header/header-pfp/a0.webp);
 }
 .pfp-overlay:has(.pfpzone.B0:hover) {
-  --landing-pfp: url(../../Assets//Header/header-pfp/b0.webp);
+  --landing-pfp-overlay: url(../../Assets//Header/header-pfp/b0.webp);
 }
 .pfp-overlay:has(.pfpzone.C0:hover) {
-  --landing-pfp: url(../../Assets//Header/header-pfp/c0.webp);
+  --landing-pfp-overlay: url(../../Assets//Header/header-pfp/c0.webp);
 }
 .pfp-overlay:has(.pfpzone.A1:hover) {
-  --landing-pfp: url(../../Assets//Header/header-pfp/a1.webp);
+  --landing-pfp-overlay: url(../../Assets//Header/header-pfp/a1.webp);
 }
 .pfp-overlay:has(.pfpzone.B1:hover) {
-  --landing-pfp: url(../../Assets//Header/header-pfp/b1.webp);
+  --landing-pfp-overlay: url(../../Assets//Header/header-pfp/b1.webp);
 }
 .pfp-overlay:has(.pfpzone.C1:hover) {
-  --landing-pfp: url(../../Assets//Header/header-pfp/c1.webp);
+  --landing-pfp-overlay: url(../../Assets//Header/header-pfp/c1.webp);
 }
 :root {
-  --landing-pfp: url(../../Assets//Header/header-pfp-1.webp);
+  --landing-pfp-overlay: url(../../Assets//Header/header-pfp-1.webp);
 }
 .landingbtn1 {
   background-image: url("../../Assets/Navbar/korazusun.svg");

@@ -1,11 +1,13 @@
+:root {
+  --icon-size: var(--fluid-25-30);
+}
 .landing-theme-selection {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  height: 40px;
-  gap: 10px;
+  height: var(--icon-size);
+  gap: var(--landing-padding2);
 }
 .landing-theme-button {
   background-color: inherit;
@@ -17,10 +19,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: var(--landing-padding2);
 }
 .landing-theme-button:hover:not(.landing-theme-button.active) {
-  padding: 4px;
+  padding: var(--landing-padding4);
   opacity: 0.6;
   transform: scale(1.2);
 }
@@ -35,8 +37,8 @@
 }
 .landing-theme-button.active {
   aspect-ratio: initial;
-  margin: 0 12px;
-  padding: 4px 8px;
+  margin: 0 var(--landing-padding);
+  padding: var(--landing-padding4) var(--landing-padding2);
   opacity: 1;
   transform: scale(1.2);
   border: 1px solid var(--tertiary-content-hover);
@@ -47,7 +49,7 @@
 }
 .landing-theme-button.active[aria-label]::after {
   content: attr(aria-label);
-  font-size: 10pt;
+  font-size: var(--fs--2);
 }
 .landing-theme-button.active:hover {
   box-shadow: inherit;

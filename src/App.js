@@ -105,15 +105,24 @@ function App() {
             <div className='landing-socials'>
               <a className='social-home' href='https://seavalanche.github.io/projectseaweb' target='_blank' rel="noreferrer">
                 <div className='social-home-icon'><LogoHome /></div>
-                <div className='social-home-name'>Seavalanche's Website</div>
+                <div className='social-home-name'>
+                  <span>Seavalanche's</span>
+                  <span>Website</span>
+                </div>
               </a>
               <a className='social-links bsky' href='https://bsky.app/profile/seavalanche.bsky.social' target='_blank' rel="noreferrer">
                 <div className='social-linkicon bsky'><LogoBluesky /></div>
-                <div className='social-linkname'>Seavalanche's Bluesky</div>
+                <div className='social-linkname'>
+                  <span>Seavalanche's</span>
+                  <span>Bluesky</span>
+                </div>
               </a>
               <a className='social-links kofi' href='https://ko-fi.com/seavalanche' target='_blank' rel="noreferrer">
                 <div className='social-linkicon kofi'><LogoKofi /></div>
-                <div className='social-linkname'>Seavalanche's Ko-fi</div>
+                <div className='social-linkname'>
+                  <span>Seavalanche's</span>
+                  <span>Ko-fi</span>
+                </div>
               </a>
             </div>
             <LandingExtLinks />

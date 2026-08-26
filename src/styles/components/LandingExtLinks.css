@@ -2,7 +2,7 @@
   margin-top: calc(var(--landing-padding4) * -1);
 }
 .toggle-btn {
-  font-size: 8pt;
+  font-size: var(--fs--3);
   font-weight: 600;
   padding: var(--landing-padding3) var(--landing-padding2);
   background-color: transparent;
@@ -13,8 +13,8 @@
 }
 .links-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--landing-padding3);
+  margin: var(--landing-padding3);
   margin-top: var(--landing-padding3);
   animation: fadeIn 0.6s ease;
 }
@@ -30,7 +30,7 @@
 }
 
 .link-item {
-  font-size: 14pt;
+  font-size: var(--fs-0);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,7 +54,7 @@
 }
 
 .status {
-  font-size: 0.85em;
+  font-size: var(--fs--1);
   text-transform: capitalize;
   opacity: 0.8;
 }
