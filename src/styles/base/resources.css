@@ -1,42 +1,42 @@
 .pfp-overlay:has(.pfpzone.A0:hover) {
-  --landing-pfp-overlay: url(../../Assets//Header/header-pfp/a0.webp);
+  --landing-pfp-overlay: url(/src/Assets//Header/header-pfp/a0.webp);
 }
 .pfp-overlay:has(.pfpzone.B0:hover) {
-  --landing-pfp-overlay: url(../../Assets//Header/header-pfp/b0.webp);
+  --landing-pfp-overlay: url(/src/Assets//Header/header-pfp/b0.webp);
 }
 .pfp-overlay:has(.pfpzone.C0:hover) {
-  --landing-pfp-overlay: url(../../Assets//Header/header-pfp/c0.webp);
+  --landing-pfp-overlay: url(/src/Assets//Header/header-pfp/c0.webp);
 }
 .pfp-overlay:has(.pfpzone.A1:hover) {
-  --landing-pfp-overlay: url(../../Assets//Header/header-pfp/a1.webp);
+  --landing-pfp-overlay: url(/src/Assets//Header/header-pfp/a1.webp);
 }
 .pfp-overlay:has(.pfpzone.B1:hover) {
-  --landing-pfp-overlay: url(../../Assets//Header/header-pfp/b1.webp);
+  --landing-pfp-overlay: url(/src/Assets//Header/header-pfp/b1.webp);
 }
 .pfp-overlay:has(.pfpzone.C1:hover) {
-  --landing-pfp-overlay: url(../../Assets//Header/header-pfp/c1.webp);
+  --landing-pfp-overlay: url(/src/Assets//Header/header-pfp/c1.webp);
 }
 :root {
-  --landing-pfp-overlay: url(../../Assets//Header/header-pfp-1.webp);
+  --landing-pfp-overlay: url(/src/Assets//Header/header-pfp-1.webp);
 }
 .landingbtn1 {
-  background-image: url("../../Assets/characters-logo/symbol-korazu-sun.svg");
+  background-image: url("/src/Assets/characters-logo/symbol-korazu-sun.svg");
 }
 .landingbtn2 {
-  background-image: url("../../Assets/characters-logo/symbol-zumiko-star.svg");
+  background-image: url("/src/Assets/characters-logo/symbol-zumiko-star.svg");
 }
 .landingbtn3 {
-  background-image: url("../../Assets/characters-logo/symbol-uzakon-moon.svg");
+  background-image: url("/src/Assets/characters-logo/symbol-uzakon-moon.svg");
 }
 .landingbtn4 {
-  background-image: url("../../Assets/characters-logo/symbol-seavalanche-infinity.svg");
+  background-image: url("/src/Assets/characters-logo/symbol-seavalanche-infinity.svg");
 }
 .landingbtn5 {
-  background-image: url("../../Assets/characters-logo/symbol-tharos-beacon.svg");
+  background-image: url("/src/Assets/characters-logo/symbol-tharos-beacon.svg");
 }
 .landingbtn6 {
-  background-image: url("../../Assets/characters-logo/symbol-seava-mind.svg");
+  background-image: url("/src/Assets/characters-logo/symbol-seava-mind.svg");
 }
 .landingbtn7 {
-  background-image: url("../../Assets/characters-logo/symbol-vesnea-heart-pink.svg");
+  background-image: url("/src/Assets/characters-logo/symbol-vesnea-heart-pink.svg");
 }

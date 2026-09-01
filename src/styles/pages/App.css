@@ -187,6 +187,20 @@
   text-shadow: 0 0 10px var(--glow);
   -webkit-text-stroke: 4px hsl(from var(--glow) h s l / 0.5);
 }
+.landing-bio {
+  font-family: "SeavalancheFont";
+  font-size: var(--sffs-0);
+  text-shadow: 0 0 10px hsl(from var(--glow) h s l / 0.2);
+  margin-top: calc(var(--landing-padding) / -1);
+  line-height: 0.9;
+  margin-bottom: var(--landing-padding4);
+}
+.landing-bio:hover {
+  color: var(--primary-content);
+  -webkit-text-stroke: 4px hsl(from var(--primary-bg) h s l / 0.2);
+  text-shadow: 0 0 10px hsl(from var(--primary-bg) h s l / 0.2);
+  transform: scale(1.1);
+}
 .landing-socials {
   display: flex;
   width: 100%;
@@ -394,20 +408,6 @@
 || LANDING CARD -> LANDING BIO
 || -----------------------------------------
 */
-.landing-bio {
-  font-family: "SeavalancheFont";
-  font-size: var(--sffs-0);
-  text-shadow: 0 0 10px hsl(from var(--glow) h s l / 0.2);
-  margin-top: calc(var(--landing-padding) / -1);
-  line-height: 0.9;
-  margin-bottom: var(--landing-padding4);
-}
-.landing-bio:hover {
-  color: var(--primary-content);
-  -webkit-text-stroke: 4px hsl(from var(--primary-bg) h s l / 0.2);
-  text-shadow: 0 0 10px hsl(from var(--primary-bg) h s l / 0.2);
-  transform: scale(1.1);
-}
 .bio-list {
   display: grid;
   gap: var(--landing-padding3);
