@@ -24,7 +24,9 @@ function App() {
     document.body.style.setProperty('--scroll-y', `${scrollY}px`);
   }, { passive: true });
 
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "light";
+  });
   const themes = [
     { id: 'light', class: 'landingbtn1', label: 'Light' },
     { id: 'dark', class: 'landingbtn3', label: 'Dark' },
