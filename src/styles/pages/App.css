@@ -235,6 +235,12 @@
   padding: 0 var(--landing-padding3);
   --svg-0: var(--glow);
 }
+/* Chromium has flickers, so I'll disable it for chromium */
+@supports (contain: paint) and (not (-moz-appearance: none)) {
+  [data-theme="beacon"] .social-home {
+    --tertiary-bg: var(--primary-content);
+  }
+}
 .social-home-icon svg {
   width: 70%;
 }

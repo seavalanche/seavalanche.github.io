@@ -120,12 +120,6 @@
 
   animation: beacon-pulse 20s infinite ease-in-out;
 }
-/* Chromium has flickers, so I'll disable it for chromium */
-@supports (contain: paint) and (not (-moz-appearance: none)) {
-  [data-theme="beacon"] {
-    --tertiary-bg: #ee479f;
-  }
-}
 [data-theme="icy"] {
   --primary-bg: var(--c-seava-white);
   --primary-content: var(--c-seava-dark-blue);
