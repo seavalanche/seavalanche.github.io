@@ -11,10 +11,10 @@ import LandingExtLinks from './Components/LandingExtLinks';
 import VesneaBio from './Components/VesneaBio';
 import Sparkles from './Components/Sparkles';
 
-import { ReactComponent as PfpBg } from './Assets/Header/header-pfp-0.svg'
-import { ReactComponent as LogoHome } from './Assets/Header/header-home.svg'
-import { ReactComponent as LogoBluesky } from './Assets/Header/header-bsky.svg'
-import { ReactComponent as LogoKofi } from './Assets/Header/header-kofi.svg'
+import { ReactComponent as PfpBg } from './assets/header/header-pfp-0.svg'
+import { ReactComponent as LogoHome } from './assets/header/header-home.svg'
+import { ReactComponent as LogoBluesky } from './assets/header/header-bsky.svg'
+import { ReactComponent as LogoKofi } from './assets/header/header-kofi.svg'
 
 function App() {
   const speed = 0.05;
@@ -69,7 +69,7 @@ function App() {
     "pfp-deimev.webp",
   ];
   const charicons4 = [
-    "pfp-placeholder.webp",
+    "pfp-nireth.jpg",
     "pfp-placeholder.webp",
     "pfp-placeholder.webp",
     "pfp-placeholder.webp",
@@ -154,7 +154,7 @@ function App() {
               return (
                 <img
                   key={i}
-                  src={`/Assets/characters-pfp/${icon}`}
+                  src={`/assets/characters-pfp/${icon}`}
                   alt={altText}
                   title={altText}
                   className="charicon"
@@ -172,7 +172,7 @@ function App() {
               return (
                 <img
                   key={i}
-                  src={`/Assets/characters-pfp/${icon}`}
+                  src={`/assets/characters-pfp/${icon}`}
                   alt={altText}
                   title={altText}
                   className="charicon"
@@ -190,7 +190,7 @@ function App() {
               return (
                 <img
                   key={i}
-                  src={`/Assets/characters-pfp/${icon}`}
+                  src={`/assets/characters-pfp/${icon}`}
                   alt={altText}
                   title={altText}
                   className="charicon"
@@ -208,7 +208,7 @@ function App() {
               return (
                 <img
                   key={i}
-                  src={`/Assets/characters-pfp/${icon}`}
+                  src={`/assets/characters-pfp/${icon}`}
                   alt={altText}
                   title={altText}
                   className="charicon"
@@ -226,7 +226,7 @@ function App() {
               return (
                 <img
                   key={i}
-                  src={`/Assets/characters-pfp/${icon}`}
+                  src={`/assets/characters-pfp/${icon}`}
                   alt={altText}
                   title={altText}
                   className="charicon"
