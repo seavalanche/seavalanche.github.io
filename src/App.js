@@ -10,6 +10,7 @@ import NewsSection from './Components/NewsSection';
 import LandingExtLinks from './Components/LandingExtLinks';
 import VesneaBio from './Components/VesneaBio';
 import Sparkles from './Components/Sparkles';
+import Marquee from './Components/Marquee';
 
 import { ReactComponent as PfpBg } from './assets/header/header-pfp-0.svg'
 import { ReactComponent as LogoHome } from './assets/header/header-home.svg'
@@ -80,9 +81,18 @@ function App() {
     "pfp-placeholder.webp",
     "pfp-placeholder.webp",
   ];
+  
+  const announcementList = [
+    { text: "Welcome to Seavalanche's Landing Page!" },
+    { text: "You can go to my website by clicking on the button below!", color: "var(--primary-content)" },
+    { text: "Explore my characters lore!" },
+    { text: ">>> Support me on Ko-fi! <<<", color: "var(--primary-content)" }, 
+    { text: ">⩊<" },
+  ];
 
   return (
     <div className='landing-container' theme={theme} toggleTheme={toggleTheme}>
+      <Marquee announcements={announcementList} />
       <div className='landing-container-header'>
         <div className='landing-card header'>
           <div className='landing-profile'>
